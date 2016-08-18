@@ -171,6 +171,9 @@ INSTALLED_APPS = [
     'filer',
     'aldryn_bootstrap3',
 
+    'sorl.thumbnail',
+    'djangocms_unitegallery',
+
     'skolaweb'
 ]
 
