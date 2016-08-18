@@ -34,9 +34,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 
-
-
-
 ROOT_URLCONF = 'skolaweb.urls'
 
 
@@ -63,6 +60,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -75,6 +73,13 @@ STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'skolaweb', 'static'),
 )
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'aldryn_boilerplates.staticfile_finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
 SITE_ID = 1
 
 
@@ -85,21 +90,23 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
-    'django.contrib.messages.context_processors.messages',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.request',
-    'django.core.context_processors.media',
-    'django.core.context_processors.csrf',
-    'django.core.context_processors.tz',
-    'sekizai.context_processors.sekizai',
-    'django.core.context_processors.static',
-    'cms.context_processors.cms_settings'
+        'django.contrib.messages.context_processors.messages',
+        'django.core.context_processors.i18n',
+        'django.core.context_processors.debug',
+        'django.core.context_processors.request',
+        'django.core.context_processors.media',
+        'django.core.context_processors.csrf',
+        'django.core.context_processors.tz',
+        'sekizai.context_processors.sekizai',
+        'django.core.context_processors.static',
+        'cms.context_processors.cms_settings',
+        'aldryn_boilerplates.context_processors.boilerplate',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    'django.template.loaders.eggs.Loader'
+        'django.template.loaders.app_directories.Loader',
+        'django.template.loaders.eggs.Loader',
+        'aldryn_boilerplates.template_loaders.AppDirectoriesLoader',
             ],
         },
     },
@@ -145,6 +152,18 @@ INSTALLED_APPS = [
     'djangocms_teaser',
     'djangocms_video',
     'reversion',
+
+    # aldryn blog
+    'aldryn_apphooks_config',
+    'aldryn_boilerplates',
+    'aldryn_categories',
+    'aldryn_common',
+    'aldryn_newsblog',
+    'aldryn_people',
+    'aldryn_reversion',
+    'parler',
+    'sortedm2m',
+    'taggit',
 
     'aldryn_style',
     'easy_thumbnails',
