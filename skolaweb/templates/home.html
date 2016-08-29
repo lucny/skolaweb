@@ -9,9 +9,10 @@
             <!-- Page Heading/Breadcrumbs -->
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Náhradní obsah</p>
+                    {% static_placeholder "prijimacky_IT" or %}<p>Náhradní obsah</p>{% endstatic_placeholder %}
                 </div>
             </div>
         </div>
     {% endplaceholder %}
 {% endblock content %}
+

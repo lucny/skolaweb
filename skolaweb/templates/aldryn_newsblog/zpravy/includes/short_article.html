@@ -1,0 +1,14 @@
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+<article class="article
+    {% if article.is_featured %} featured{% endif %}
+    {% if not article.published %} unpublished{% endif %}">
+    <h4>
+        {% if not detail_view %}
+            <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% render_model article "title" %}</a>
+        {% else %}
+            {% render_model article "title" %}
+        {% endif %}
+    </h4>
+
+</article>

@@ -152,6 +152,11 @@ INSTALLED_APPS = [
     'djangocms_teaser',
     'djangocms_video',
     'reversion',
+    'appconf',
+    'django_tablib',
+    'bootstrap3',
+    'future',
+    'tablib',
 
     # aldryn blog
     'aldryn_apphooks_config',
@@ -161,15 +166,19 @@ INSTALLED_APPS = [
     'aldryn_newsblog',
     'aldryn_people',
     'aldryn_reversion',
+    #'aldryn_events',
+    'aldryn_translation_tools',
     'parler',
     'sortedm2m',
     'taggit',
 
     'aldryn_style',
     'easy_thumbnails',
+    'extended_choices',
     'mptt',
     'filer',
     'aldryn_bootstrap3',
+    'standard_form',
 
     'sorl.thumbnail',
     'djangocms_unitegallery',
@@ -211,12 +220,38 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
+    ('tpl_home.html', 'Homepage'),
     ('home.html', 'Home'),
+    ('itobor.html', 'ITobor'),
 )
 
 CMS_PERMISSION = True
 
-CMS_PLACEHOLDER_CONF = {}
+CMS_PLACEHOLDER_CONF = {
+    'newsblog_article_content': {
+        'plugins': ['TextPlugin', 'PicturePlugin', 'Bootstrap3IconCMSPlugin', 'Bootstrap3LabelCMSPlugin', 'Bootstrap3ImageCMSPlugin', 'Bootstrap3ButtonCMSPlugin',
+                    'Bootstrap3FileCMSPlugin'],
+        'text_only_plugins': ['LinkPlugin'],
+        'extra_context': {"width": 640},
+        'name': gettext("Content"),
+        'language_fallback': True,
+        'default_plugins': [
+            {
+                'plugin_type': 'TextPlugin',
+                'values': {
+                    'body': '<p>Zde bude text</p>',
+                },
+            },
+        ],
+        'child_classes': {
+            'TextPlugin': ['PicturePlugin', 'LinkPlugin', 'Bootstrap3IconCMSPlugin', 'Bootstrap3LabelCMSPlugin'],
+        },
+        'parent_classes': {
+            'LinkPlugin': ['TextPlugin'],
+        },
+    },
+}
+
 
 #DATABASES = {
 #    'default': {
@@ -274,6 +309,9 @@ CKEDITOR_SETTINGS = {
     #  ],
     #  See: https://github.com/yakupadakli/django_blog/blob/master/ckeditor/ckeditor/styles.js
     #  for default style definitions.
+
+    'basicEntities': False,
+    'entities': False,
     'stylesSet': [
         {
             'name': 'Page Header H1',
@@ -308,3 +346,10 @@ CKEDITOR_SETTINGS = {
             }
         },
     ]}
+
+TEXT_HTML_SANITIZE = False
+CMS_PLACEHOLDER_CACHE = False
+CMS_PAGE_CACHE = False
+CMS_PLUGIN_CACHE = False
+
+ALDRYN_BOOTSTRAP3_CAROUSEL_STYLES = "full"

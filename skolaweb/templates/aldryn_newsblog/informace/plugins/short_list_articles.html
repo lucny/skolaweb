@@ -1,0 +1,10 @@
+{% load i18n %}
+
+{% for article in article_list %}
+    {% include "aldryn_newsblog/includes/short_article.html" with namespace=instance.app_config.namespace %}
+{% empty %}
+    <p>{% trans "No items available" %}</p>
+{% endfor %}
+    <div class="aldryn-newsblog-pagination">
+        {% include "aldryn_newsblog/includes/pagination.html" with namespace=instance.app_config.namespace %}
+    </div>
