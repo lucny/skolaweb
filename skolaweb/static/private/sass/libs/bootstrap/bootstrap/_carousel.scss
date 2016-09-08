@@ -6,6 +6,8 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .carousel-inner {

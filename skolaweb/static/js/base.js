@@ -33,6 +33,16 @@ var Cl = window.Cl || {};
                 'lowerThan': 'boxShadow'
             });
         }
+
+
+        $(".ucitel-detail").hide();
+        $(".ucitel-jmeno").click(function(){
+            var bgcolor = $(this).css("background-color");
+            var color = $(this).css("color");
+            $(this).css({"background-color": color});
+            $(this).css({"color": bgcolor});
+            $(this).siblings(".ucitel-detail").toggle(500);
+        });
     });
 
 })(jQuery);

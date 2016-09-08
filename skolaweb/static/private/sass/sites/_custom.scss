@@ -1,6 +1,92 @@
 // #############################################################################
 // CUSTOM
 
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+ 
+
+.menu-obory {
+    min-height: 50px; 
+    .obor-icon {
+        display: block;
+        min-height: $line-height-computed * 4; 
+        color: $gray-darker;
+        vertical-align: middle;
+        text-transform: uppercase;
+        align: center;
+        font-size: 100%;
+        @media (max-width: $screen-xs-max) {
+            min-height: $line-height-computed * 1.2; 
+            font-size: 90%;
+        }
+    } 
+
+
+    div {
+        display: inline-block;
+        width: 20%;
+/*        font-size: 0;
+        line-height: 0;*/
+        background-size: 100%;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+        }
+    }
+
+    .strojirenstvi {
+        background-color: $brand-primary;
+        background-image: url(../img/logo-strojirenstvi.png); 
+    } 
+    .informatika {
+        background-color: $brand-success;
+        background-image: url(../img/logo-informatika.png); 
+    } 
+    .design {
+        background-color: $brand-warning;
+        background-image: url(../img/logo-design.png); 
+    } 
+    .grafika {
+        background-color: $brand-info;
+        background-image: url(../img/logo-grafika.png); 
+    } 
+    .hracka {
+        background-color: $brand-danger;
+        background-image: url(../img/logo-hracka.png); 
+    } 
+}
+
 // this file is the starting point for custom style and structure
 // feel free to organise your code here as you wish
 // keep in mind that you can use deeper folder nesting for more structure and refinement
@@ -91,18 +177,7 @@ h6 {
     font-weight: 600;
 }
 
-// mobile only
-@media (max-width: $screen-xs-max) {
-    h1 {
-        font-size: 40px;
-    }
-    h2 {
-        font-size: 30px;
-    }
-    h4 {
-        font-size: 18px;
-    }
-}
+
 
 a {
     transition: color $speed-base;
@@ -203,9 +278,23 @@ dl.dl-horizontal {
 }
 
 .navbar {
-    background-color: $gray-lighter;
+    background-color: white;
     height: 60px;
-    border-bottom: 1px solid $gray;
+}
+
+.navbar-head .navbar-nav a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.navbar-right {
+    margin-right: -20px;
+}
+
+.navbar-head-narrow {
+    min-height: 50px;
+    background: white;
 }
 
 .person-photo {
@@ -216,7 +305,7 @@ dl.dl-horizontal {
     background-color: $gray-lighter;
     overflow: hidden;
     margin-top: 60px;
-    margin-bottom: $line-height-computed;
+    /*margin-bottom: $line-height-computed;*/
     z-index: 1;
     @media (max-width: $screen-xs-max) {
         max-height: 200px;
@@ -241,4 +330,87 @@ dl.dl-horizontal {
     font-size: $font-size-h4;
     margin-bottom: $line-height-computed;
     margin-top: $line-height-computed;
+}
+
+.decorate-row {
+    background-image: url("../img/horni-lista.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    min-height: 20px;
+}
+
+.ucitel-foto {
+    width: 50%;
+}
+
+.vizitka {
+    &.ucitele {
+        font-size: 90%;
+        .ucitel-jmeno {
+            color: $link-color;
+            background-color: white;
+            padding: 10px;
+        }
+        .ucitel-detail {
+            position: absolute;
+            z-index: 10;
+            border: 1px solid $gray;
+            padding: 10px;
+            background-color: $gray-lighter;
+        }
+    }
+}
+
+
+@media (max-width: $screen-md-max) {
+    .navbar {
+        font-size: 12px;        
+    }
+    #navigation {
+        margin-top: 30px;
+    }
+    .navbar-brand {
+        font-size: 14px;
+    }
+
+    .navbar .nav {
+        margin-bottom: 20px;
+    }
+}
+
+// mobile only
+@media (max-width: $screen-xs-max) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .navbar-brand {
+        font-size: 12px;
+    }
+
+    .navbar-header img {
+        margin-top: 10px;
+        max-height: 80px;
+    }
+
+    .navbar-head #navigation {
+        margin-top: 0px;
+    }
+
+    .navbar .nav {
+       margin-bottom: 0px;
+       margin-left: 0px;
+       margin-right: 0px;
+    }
+    .navbar-right {
+       margin-right: 0px;
+    }
 }

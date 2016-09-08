@@ -1,3 +1,8 @@
-{% extends "fullwidth.html" %}
+{% extends "base-home.html" %}
+{% load i18n cms_tags %}
 
 {% block body_class %}tpl-home{% endblock %}
+
+{% block content %}
+     {% with 940 as width %}{% placeholder content %}{% endwith %}
+{% endblock %}
