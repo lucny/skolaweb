@@ -7,24 +7,24 @@
 {% block header %}
 {# INFO: navbar concept: http://getbootstrap.com/components/#navbar #}
 <header class="container navbar navbar-head js-navbar-head">
-        <div class="row decorate-row">
-            <div class="col-sm-24"></div>
-        </div>
         {# INFO: the logo should be placed first for seo reasons #}
         <div class="row">
             <div class="navbar-header col-sm-12">
                 {# INFO: the logo should be placed first for seo reasons #}
-                <div class="col-sm-8 col-xs-6">
+                <!--<div class="col-sm-8 col-xs-6">
                         <a href="/">
                             <img src="{% static "img/logo-skola.png" %}" alt="{{ request.site.name }}" class="img-responsive" />
                         </a>
-                </div>
-                <div class="col-sm-16 col-xs-18">
-                    <h1 class="navbar-brand">
+                </div>-->
+                <div class="col-sm-24 col-xs-24">
+                    <a href="/">
+                          <img src="{% static "img/logo-skola.png" %}" alt="{{ request.site.name }}" class="img-responsive" />
+                    </a>
+                    <!--<h1 class="navbar-brand">
                         <a href="/">
                             <span>Střední škola průmyslová <br>a umělecká Opava{{ request.site.name }}</span>
                         </a>
-                    </h1>
+                    </h1>-->
                     <button type="button" class="navbar-toggle navbar-inverse collapsed" data-toggle="collapse" data-target=".js-navbar-header">
                         {% for row in 123|make_list %}<span class="icon-bar"></span>{% endfor %}
                     </button>
