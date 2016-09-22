@@ -35,20 +35,95 @@
 }
  
 
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-9 {
+    width: 60%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-9 {
+        width: 60%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-9 {
+        width: 60%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-9 {
+        width: 60%;
+        float: left;
+    }
+}
+
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-6 {
+    width: 40%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-6 {
+        width: 40%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-6 {
+        width: 40%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-6 {
+        width: 40%;
+        float: left;
+    }
+}
+
+
 .menu-obory {
     min-height: 30px; 
     .obor-icon {
         display: block;
-        min-height: $line-height-computed * 2.5; 
+        min-height: $line-height-computed * 2; 
         color: white;
         font-weight: bold;        
         vertical-align: middle;
         text-transform: uppercase;
         text-align: center;
-        font-size: 100%;
+        font-size: 90%;
+        @media (max-width: $screen-md-max) {
+            min-height: $line-height-computed * 2; 
+            font-size: 75%;
+        }
+        @media (max-width: $screen-sm-max) {
+            min-height: $line-height-computed * 2; 
+            font-size: 65%;
+        }
         @media (max-width: $screen-xs-max) {
             min-height: $line-height-computed * 1.2; 
-            font-size: 90%;
+            font-size: 80%;
         }
     } 
 
@@ -271,21 +346,24 @@ dl.dl-horizontal {
     }
     .panel-heading {
         border: none;
+        h4 a {
+            padding-left: 0;
+        }
         .panel-title {
             border: none;
             a {
                 font-size: $font-size-h3;
-                color: $brand-primary;
+                color: $gray-darker;
                 text-decoration: none;
-                border-bottom: 1px solid $brand-primary;
+                border-bottom: 1px solid $gray-darker;
             }   
             a.collapsed {
                 background-color: white;
                 text-decoration: none;
-                color: $brand-primary; 
-                border-bottom: 1px solid $gray-light;
+                color: $gray-darker; 
+                border-bottom: 1px solid $gray-darker;
                 &:hover, &:active, &:focus {
-                    background-color: $gray-lighter;
+                   /* background-color: $gray-lighter; */
                     text-decoration: none;
                     color: $brand-primary; 
                 }
@@ -469,8 +547,12 @@ dl.dl-horizontal {
 
 .frontpage-info {
     h2 {
-        background-color: darken(#c6379c,20%);
-        color: white;
+        /*background-color: darken(#c6379c,20%);*/
+        color: $gray-darker;
+        text-align: left;
+        border-bottom: 1px solid $gray-darker;
+        padding-bottom: 10px;
+        font-size: 30px;
     }
     .aldryn-newsblog-article {
         padding-bottom: 0;
@@ -492,13 +574,20 @@ dl.dl-horizontal {
 
 .frontpage-actual {
     h2 {
-        background-color: darken(#45c9e1,20%);
-        color: white;
+        /*background-color: darken(#45c9e1,20%);
+        color: white;*/
+        color: $gray-darker;
+        text-align: left;
+        border-bottom: 1px solid $gray-darker;
+        padding-bottom: 10px;
+        font-size: 30px;
     }
     .aldryn-newsblog-article {
         padding-bottom: 0;
         h2 {
+            color: darken(#45c9e1,20%);
             background-color: white;
+            border-bottom: none;
             a {
 /*                color: #c6379c;*/
                 font-size: 18px;  
@@ -508,14 +597,36 @@ dl.dl-horizontal {
             background-color: white;
             a {
 /*                color: #c6379c;*/
-                font-size: 16px;  
+                font-size: 18px;  
             }          
         }       
         p {
-            font-size: 14px;
+            font-size: 16px;
         }
     }
-    .aldryn-newsblog-meta {
-        padding-bottom: 0;
-    }
+}
+
+.aldryn-newsblog-meta {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.publishing-date {
+    font-size: 80%;
+    padding-bottom: 10px;
+    color: $gray-dark;
+}
+
+.aldryn-newsblog-article h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.aldryn-newsblog-article .lead {
+    color: $gray-darker;
+}
+
+.aldryn-newsblog-article .category a {
+    color: #b7d868;
+    font-size: 75%;
 }

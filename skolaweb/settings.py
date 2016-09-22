@@ -60,6 +60,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+DATE_FORMAT = 'j. E Y'
+SHORT_DATE_FORMAT = 'j. n. Y'
+
 ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
 
 # Static files (CSS, JavaScript, Images)

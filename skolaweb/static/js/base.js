@@ -45,6 +45,14 @@ var Cl = window.Cl || {};
         });
 
         $(".info").hide();
+        $(".menu-obory-down").hide();
+
+        $(".menu-obory").mouseenter(function(){
+            var screen = $(window);
+            if (screen.width() > 1000) {
+                $(".menu-obory-down").show(200);
+            }
+        });
 
         $(".menu-obory-down > div").mouseenter(function(){
             $(this).css({"opacity":0.5});
@@ -66,6 +74,7 @@ var Cl = window.Cl || {};
 
         $(".info").click(function(){
             $(".info").hide();
+            $(".menu-obory-down").hide();
         });
 
     });
