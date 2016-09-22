@@ -43,6 +43,31 @@ var Cl = window.Cl || {};
             $(this).css({"color": bgcolor});
             $(this).siblings(".ucitel-detail").toggle(500);
         });
+
+        $(".info").hide();
+
+        $(".menu-obory-down > div").mouseenter(function(){
+            $(this).css({"opacity":0.5});
+        });
+
+        $(".menu-obory-down > div").mouseleave(function(){
+            $(this).css({"opacity":1});
+        });
+
+        $(".menu-obory-down > .strojirenstvi").click(function(){
+            $(".info").hide();
+			$(".info.strojirenstvi").show(500);
+        });
+
+        $(".menu-obory-down > .informatika").click(function(){
+            $(".info").hide();
+			$(".info.informatika").show(500);
+        });
+
+        $(".info").click(function(){
+            $(".info").hide();
+        });
+
     });
 
 })(jQuery);

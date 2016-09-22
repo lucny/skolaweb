@@ -13,7 +13,7 @@
     .navbar-brand {
         padding-top: 0;
         padding-bottom: 0;
-        margin-top: 30px;
+        margin-top: 40px;
         margin-bottom: 0;
         a {
             /* @include hide-content();*/
@@ -25,7 +25,7 @@
     }
     // general navbar items
     #navigation {
-        margin-top: 80px;
+        margin-top: 55px;
     }
     .navbar-nav {
         background-color: white;
@@ -38,13 +38,14 @@
     // custom dropdown styling
     .dropdown-menu {
         border: none;
-        background: $navbar-inverse-bg;
+        background: $gray-light;
         li a {
             color: $navbar-default-color;
             font-weight: 300;
             text-align: left;
             &:hover, &:active, &:focus {
-                background: darken($navbar-default-color, 20%);
+                color: lighten($navbar-default-color, 30%);
+                background: lighten($navbar-inverse-bg, 20%);
             }
         }
     }
@@ -84,8 +85,8 @@
         height: 50px;
     }
     .nav .navbar-nav > li > a {
-        padding-top: 14px;
-        padding-bottom: 14px;
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
     .navbar-toggle {
         margin-top: 8px;

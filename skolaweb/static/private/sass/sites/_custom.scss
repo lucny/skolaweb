@@ -36,14 +36,15 @@
  
 
 .menu-obory {
-    min-height: 50px; 
+    min-height: 30px; 
     .obor-icon {
         display: block;
-        min-height: $line-height-computed * 4; 
-        color: $gray-darker;
+        min-height: $line-height-computed * 2.5; 
+        color: white;
+        font-weight: bold;        
         vertical-align: middle;
         text-transform: uppercase;
-        align: center;
+        text-align: center;
         font-size: 100%;
         @media (max-width: $screen-xs-max) {
             min-height: $line-height-computed * 1.2; 
@@ -64,27 +65,47 @@
             width: 100%;
         }
     }
+}
 
+.menu-obory-down {
+    height: 20px; 
+    text-align: center;
+    color: white;
+}
+
+.menu-obory, .menu-obory-down {
     .strojirenstvi {
-        background-color: $brand-primary;
-        background-image: url(../img/logo-strojirenstvi.png); 
+        background-color: #003052;
+        /* background-image: url(../img/logo-strojirenstvi.png); */
     } 
     .informatika {
-        background-color: $brand-success;
-        background-image: url(../img/logo-informatika.png); 
+        background-color: #45c9e1;
+        /* background-image: url(../img/logo-informatika.png); */
     } 
     .design {
-        background-color: $brand-warning;
-        background-image: url(../img/logo-design.png); 
+        background-color: #f1a0a1;
+        /* background-image: url(../img/logo-design.png); */
     } 
     .grafika {
-        background-color: $brand-info;
-        background-image: url(../img/logo-grafika.png); 
+        background-color: #b7d868;
+        /* background-image: url(../img/logo-grafika.png); */
     } 
     .hracka {
-        background-color: $brand-danger;
-        background-image: url(../img/logo-hracka.png); 
+        background-color: #c6379c;
+        /* background-image: url(../img/logo-hracka.png); */
     } 
+}
+
+.info.strojirenstvi {
+        background-color: #003052;
+        color: white; 
+        padding: 10px; 
+}
+
+.info.informatika {
+        background-color: #45c9e1;
+        color: white;  
+        padding: 10px; 
 }
 
 // this file is the starting point for custom style and structure
@@ -282,6 +303,33 @@ dl.dl-horizontal {
     height: 60px;
 }
 
+.navbar-brand {
+    a {
+        color: #666;
+        font-size: 80%;
+    }
+}
+
+.navbar-nav > li {
+    a {
+        color: #666;
+        font-size: 90%;        
+    }
+    a:hover {
+        background-color: lighten($gray-light, 5%);;
+    }
+    &:nth-child(2) > a {
+        background: darken($gray-light, 5%);
+    }
+    &:nth-child(3) > a {
+        background: darken($gray-light, 10%);
+    }
+    &:nth-child(4) > a {
+        background: darken($gray-light, 15%);
+    }
+
+}
+
 .navbar-head .navbar-nav a {
     padding-left: 15px;
     padding-right: 15px;
@@ -412,5 +460,58 @@ dl.dl-horizontal {
     }
     .navbar-right {
        margin-right: 0px;
+    }
+}
+
+.frontpage-info {
+    h2 {
+        background-color: darken(#c6379c,20%);
+        color: white;
+    }
+    .aldryn-newsblog-article {
+        padding-bottom: 0;
+        h3 {
+            font-size: 18px;  
+            a {
+                color: #c6379c;
+            }          
+        }       
+        p {
+            font-size: 16px;
+        }
+    }
+    .aldryn-newsblog-meta {
+        padding-bottom: 0;
+    }
+}
+
+
+.frontpage-actual {
+    h2 {
+        background-color: darken(#45c9e1,20%);
+        color: white;
+    }
+    .aldryn-newsblog-article {
+        padding-bottom: 0;
+        h2 {
+            background-color: white;
+            a {
+/*                color: #c6379c;*/
+                font-size: 18px;  
+            }          
+        }       
+        h3 {
+            background-color: white;
+            a {
+/*                color: #c6379c;*/
+                font-size: 16px;  
+            }          
+        }       
+        p {
+            font-size: 14px;
+        }
+    }
+    .aldryn-newsblog-meta {
+        padding-bottom: 0;
     }
 }
