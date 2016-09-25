@@ -1,7 +1,7 @@
 // #############################################################################
 // CUSTOM
 
-.col-xs-15,
+/*.col-xs-15,
 .col-sm-15,
 .col-md-15,
 .col-lg-15 {
@@ -100,19 +100,18 @@
         float: left;
     }
 }
-
+*/
 
 .menu-obory {
-    min-height: 30px; 
+    background-color: #e3e3e3;
     .obor-icon {
         display: block;
-        min-height: $line-height-computed * 2; 
-        color: white;
-        font-weight: bold;        
-        vertical-align: middle;
+        color: #333;
+        font-weight: 600;
+        margin-top: $line-height-computed * 0.7;
         text-transform: uppercase;
         text-align: center;
-        font-size: 90%;
+        font-size: 70%;
         @media (max-width: $screen-md-max) {
             min-height: $line-height-computed * 2; 
             font-size: 75%;
@@ -130,12 +129,36 @@
 
     div {
         display: inline-block;
-        width: 20%;
-/*        font-size: 0;
+/*        width: 20%;
+        font-size: 0;
         line-height: 0;*/
-        background-size: 100%;
-        background-position: left bottom;
+        min-height: $line-height-computed * 2; 
+        background-color: #e3e3e3;
+        background-image: url("../img/obory-arrow.png");
         background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 20px 20px;
+        &.search {            
+            padding: 10px 5px;
+            background-image: none;
+            /*background-color: white;*/
+            color: #333;
+            p {
+                margin-bottom: 0;
+                input {
+                    &.form-control {
+                        width: 80%;
+                        height: 30px;
+                        font-size: 14px;
+                        line-height: 1.2;
+                        border: 2px solid #ccc;
+                    }
+                }
+                a {
+                    color: #333;
+                }
+            }
+        }
         @media (max-width: $screen-xs-max) {
             width: 100%;
         }
@@ -148,26 +171,36 @@
     color: white;
 }
 
-.menu-obory, .menu-obory-down {
-    .strojirenstvi {
+.menu-obory {
+    .strojirenstvi:hover {
         background-color: #003052;
-        /* background-image: url(../img/logo-strojirenstvi.png); */
+        a {
+            color: white;
+        }
     } 
-    .informatika {
+    .informatika:hover {
         background-color: #45c9e1;
-        /* background-image: url(../img/logo-informatika.png); */
+        a {
+            color: white;
+        }
     } 
-    .design {
+    .hracka:hover {
         background-color: #f1a0a1;
-        /* background-image: url(../img/logo-design.png); */
+        a {
+            color: white;
+        }
     } 
-    .grafika {
+    .design:hover {
         background-color: #b7d868;
-        /* background-image: url(../img/logo-grafika.png); */
+        a {
+            color: white;
+        }
     } 
-    .hracka {
+    .grafika:hover {
         background-color: #c6379c;
-        /* background-image: url(../img/logo-hracka.png); */
+        a {
+            color: white;
+        }
     } 
 }
 
@@ -348,20 +381,48 @@ dl.dl-horizontal {
         border: none;
         h4 a {
             padding-left: 0;
+            &::before {
+                 content: none;
+            }
         }
         .panel-title {
             border: none;
             a {
-                font-size: $font-size-h3;
+                background-color: #555;
+                margin: 0px -10px 0px -10px;
+                text-transform: uppercase;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: 400;
+/*                font-size: $font-size-h3;
                 color: $gray-darker;
                 text-decoration: none;
-                border-bottom: 1px solid $gray-darker;
+                border-bottom: 1px solid $gray-darker;*/
+                background-image: url("../img/obory-arrow.png");
+                background-repeat: no-repeat;
+                background-position: bottom right;
+                background-size: 20px 20px;                        
             }   
             a.collapsed {
-                background-color: white;
+                background-color: #555;
+                margin: 0px -10px 0px -10px;
+                text-transform: uppercase;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: 400;
+                background-image: url("../img/obory-arrow.png");
+                background-repeat: no-repeat;
+                background-position: bottom right;
+                background-size: 20px 20px;        
+
+/*                background-color: white;
                 text-decoration: none;
                 color: $gray-darker; 
-                border-bottom: 1px solid $gray-darker;
+                border-bottom: 1px solid $gray-darker;*/
                 &:hover, &:active, &:focus {
                    /* background-color: $gray-lighter; */
                     text-decoration: none;
@@ -370,6 +431,7 @@ dl.dl-horizontal {
             }               
         }
     }
+
     .panel-body {
         padding-left: 0;
         padding-right: 0;
@@ -396,7 +458,7 @@ dl.dl-horizontal {
     a:hover {
         background-color: lighten($gray-light, 5%);;
     }
-    &:nth-child(2) > a {
+/*    &:nth-child(2) > a {
         background: darken($gray-light, 5%);
     }
     &:nth-child(3) > a {
@@ -404,7 +466,7 @@ dl.dl-horizontal {
     }
     &:nth-child(4) > a {
         background: darken($gray-light, 15%);
-    }
+    }*/
 
 }
 
@@ -430,7 +492,7 @@ dl.dl-horizontal {
 .feature {
     background-color: $gray-lighter;
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 0px;
     /*margin-bottom: $line-height-computed;*/
     z-index: 1;
     @media (max-width: $screen-xs-max) {
@@ -439,16 +501,23 @@ dl.dl-horizontal {
 }
 
 .footer {
-    color: $text-color;
+    color: none;
+    background: none;
     .footer-copyright {
         font-size: 14px;
-        background: $gray-lighter;
+        background: none;
+        .container {
+           background-color: #777; 
+        }
     }
     h5 {
         font-size: 90%;
         padding-bottom: 10px;
         border-bottom: 1px dotted $gray;
-        color: $brand-primary;
+        color: #aaa;
+    }
+    a {
+        color: #d0d543;   
     }
 }
 
@@ -499,10 +568,6 @@ dl.dl-horizontal {
         font-size: 14px;
     }
 
-    .navbar .nav {
-        margin-bottom: 20px;
-    }
-
     .menu-obory-down {
         display: none;
     }
@@ -543,27 +608,51 @@ dl.dl-horizontal {
     .navbar-right {
        margin-right: 0px;
     }
+    .frontpage-sidebar {
+        display: hide;
+    }
+}
+
+.frontpage-info-row {
+    background-color: #e3e3e3;
+}
+
+.frontpage-sidebar {
+    background-color: white;
 }
 
 .frontpage-info {
+    background-color: #e3e3e3;
     h2 {
-        /*background-color: darken(#c6379c,20%);*/
-        color: $gray-darker;
-        text-align: left;
-        border-bottom: 1px solid $gray-darker;
-        padding-bottom: 10px;
-        font-size: 30px;
+        background-color: #555;
+        margin: 0px -10px 20px -10px;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 400;
     }
     .aldryn-newsblog-article {
         padding-bottom: 0;
+        font-weight: 400;
         h3 {
+            padding-left: 40px;
             font-size: 18px;  
+            min-height: 20px;
+            text-transform: uppercase;
+            background-image: url("../img/aktuality-logo-sede.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 32px 18px;
             a {
-                color: #c6379c;
+                color: #e31e24;
+                font-weight: 300;
             }          
         }       
         p {
-            font-size: 16px;
+            font-size: 15px;
+            padding-left: 40px;
         }
     }
     .aldryn-newsblog-meta {
@@ -571,6 +660,46 @@ dl.dl-horizontal {
     }
 }
 
+.frontpage-aktuality {
+    background-color: #e3e3e3;
+    h2 {
+        background-color: #555;
+        margin: 0px -10px 20px -10px;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        background-image: url("../img/obory-arrow.png");
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 20px 20px;        
+    }
+    .aldryn-newsblog-article {
+        padding-bottom: 0;
+        h3 {
+            padding-left: 40px;
+            font-size: 18px;  
+            min-height: 20px;
+            /*text-transform: uppercase;*/
+            background-image: url("../img/aktuality-logo.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 32px 18px;
+            a {
+                color: #ae4a84;
+                font-weight: 300;
+            }          
+        }       
+        p {
+            font-size: 15px;
+            padding-left: 40px;
+        }
+    }
+    .aldryn-newsblog-meta {
+        padding-bottom: 0;
+    }
+}
 
 .frontpage-actual {
     h2 {
@@ -629,4 +758,29 @@ dl.dl-horizontal {
 .aldryn-newsblog-article .category a {
     color: #b7d868;
     font-size: 75%;
+}
+
+.container {
+    &.feature {
+        padding-left: 0;
+        padding-right: 0;
+        .row {
+            div {
+                padding-left: 0;
+                padding-right: 0;            
+            }
+        }
+    }
+}
+
+.carousel {
+    &.col-sm-12 {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+    }
+}
+
+.feature {
+        background-color: #000;
 }

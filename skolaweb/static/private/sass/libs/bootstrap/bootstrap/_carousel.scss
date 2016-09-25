@@ -6,8 +6,8 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .carousel-inner {
@@ -100,7 +100,8 @@
   width: $carousel-control-width;
   @include opacity($carousel-control-opacity);
   font-size: $carousel-control-font-size;
-  color: $carousel-control-color;
+  /*color: $carousel-control-color;*/
+  color: #dad8c3;
   text-align: center;
   text-shadow: $carousel-text-shadow;
   // We can't have this transition here because WebKit cancels the carousel
@@ -108,12 +109,12 @@
 
   // Set gradients for backgrounds
   &.left {
-    @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
+    /*@include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));*/
   }
   &.right {
     left: auto;
     right: 0;
-    @include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
+    /*@include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));*/
   }
 
   // Hover/focus state
@@ -174,7 +175,7 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  margin-bottom: 0px;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -182,34 +183,35 @@
   padding-left: 0;
   list-style: none;
   text-align: center;
-
+  
   li {
-    display: inline-block;
-    width:  10px;
-    height: 10px;
-    margin: 1px;
-    text-indent: -999px;
-    border: 1px solid $carousel-indicator-border-color;
-    border-radius: 10px;
-    cursor: pointer;
+      display: inline-block;
+      width:  13px;
+      height: 13px;
+      margin: 1px;
+      text-indent: -999px;
+      border: 1px solid #dad8c3;
+      border-radius: 10px;
+      cursor: pointer;
 
-    // IE8-9 hack for event handling
-    //
-    // Internet Explorer 8-9 does not support clicks on elements without a set
-    // `background-color`. We cannot use `filter` since that's not viewed as a
-    // background color by the browser. Thus, a hack is needed.
-    // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Internet_Explorer
-    //
-    // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
-    // set alpha transparency for the best results possible.
-    background-color: #000 \9; // IE8
-    background-color: rgba(0,0,0,0); // IE9
+      // IE8-9 hack for event handling
+      //
+      // Internet Explorer 8-9 does not support clicks on elements without a set
+      // `background-color`. We cannot use `filter` since that's not viewed as a
+      // background color by the browser. Thus, a hack is needed.
+      // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Internet_Explorer
+      //
+      // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
+      // set alpha transparency for the best results possible.
+      background-color: #000 \9; // IE8
+      background-color: rgba(0,0,0,0); // IE9
   }
+
   .active {
     margin: 0;
-    width:  12px;
-    height: 12px;
-    background-color: $carousel-indicator-active-bg;
+    width:  15px;
+    height: 15px;
+    background-color: #dad8c3;
   }
 }
 
@@ -220,17 +222,24 @@
   position: absolute;
   left: 0%;
   right: 0%;
-  bottom: 50px;
+  bottom: 30px;
   z-index: 10;
   padding-top: 0px;
   padding-bottom: 0px;
-  background-color: $gray-darker;
+  background-color: #333;
   opacity: 0.8;
-  color: white;
   text-align: center;
   p {
     margin: 0;
-    line-height: 1;
+    line-height: 1.5;
+    a {
+      color: #ccc;
+      font-size: 14px;
+      font-weight: 600;
+      &:hover {
+        color: white;
+      }
+    }
   }
   & .btn {
     text-shadow: none; // No shadow for button elements in carousel-caption
@@ -267,12 +276,12 @@
   .carousel-caption {
     left: 0%;
     right: 0%;
-    color: white;
+    color: #dad8c3;
   }
 
   // Move up the indicators
   .carousel-indicators {
-    bottom: 10px;
+    bottom: 0px;
   }
 }
 

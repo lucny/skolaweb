@@ -45,36 +45,47 @@ var Cl = window.Cl || {};
         });
 
         $(".info").hide();
-        $(".menu-obory-down").hide();
 
-        $(".menu-obory").mouseenter(function(){
-            var screen = $(window);
+        var screen = $(window);
+        $(".menu-obory > .strojirenstvi").click(function () {
             if (screen.width() > 1000) {
-                $(".menu-obory-down").show(200);
+                $(".info").hide();
+                $(".menu-obory > div").css({"background-color":"#e3e3e3"});
+                $(".menu-obory > div a").css({"color":"#333"});
+                $(".info.strojirenstvi").show(500);
+                $(this).css({"background-color":"#003052"});
+                $(this).children("a").css({"color":"white"});
             }
         });
 
-        $(".menu-obory-down > div").mouseenter(function(){
-            $(this).css({"opacity":0.5});
+        $(".menu-obory > .informatika").click(function () {
+            if (screen.width() > 1000) {
+                $(".info").hide();
+                $(".menu-obory > div").css({"background-color":"#e3e3e3"});
+                $(".menu-obory > div a").css({"color":"#333"});
+                $(".info.informatika").show(500);
+                $(this).css({"background-color":"#45c9e1"});
+                $(this).children("a").css({"color":"white"});
+            }
         });
 
-        $(".menu-obory-down > div").mouseleave(function(){
-            $(this).css({"opacity":1});
+        $(".info").click(function () {
+             $(".info").hide();
+             $(".menu-obory > div").css({"background-color":"#e3e3e3"});
+             $(".menu-obory > div a").css({"color":"#333"});
         });
 
-        $(".menu-obory-down > .strojirenstvi").click(function(){
-            $(".info").hide();
-			$(".info.strojirenstvi").show(500);
-        });
-
-        $(".menu-obory-down > .informatika").click(function(){
-            $(".info").hide();
-			$(".info.informatika").show(500);
-        });
-
-        $(".info").click(function(){
-            $(".info").hide();
-            $(".menu-obory-down").hide();
+        var increase = true;
+        $(".frontpage-aktuality").click(function () {
+             if (increase) {
+                 $(".main-block").animate({width: "100%"}, 500);
+                 $(".frontpage-sidebar").hide();
+                 increase=false;
+             } else {
+                 $(".main-block").animate({width: "83.33333%"}, 500);
+                 $(".frontpage-sidebar").show();
+                 increase=true;
+             }
         });
 
     });
