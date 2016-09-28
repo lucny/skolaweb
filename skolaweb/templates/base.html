@@ -66,6 +66,11 @@
 <hr class="sr-only" />
 <div class="container feature">
     {% block feature %}
+        {% placeholder "feature" or %}
+            <div class="feature-visual">
+                <img src="{% static 'img/visuals/skola-default.jpg' %}" alt="">
+            </div>
+        {% endplaceholder %}
     {% endblock feature %}
 </div>
 <div class="container submenu-obory">
