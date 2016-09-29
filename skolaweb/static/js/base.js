@@ -51,6 +51,7 @@ var Cl = window.Cl || {};
             if (screen.width() > 1000) {
                 $(".info").hide();
                 $(".menu-obory > div").css({"background-color":"#e3e3e3"});
+                $(".menu-obory > .search").css({"background-color":"#fff"});
                 $(".menu-obory > div a").css({"color":"#333"});
                 $(".info.strojirenstvi").show(500);
                 $(this).css({"background-color":"#003052"});
@@ -62,6 +63,7 @@ var Cl = window.Cl || {};
             if (screen.width() > 1000) {
                 $(".info").hide();
                 $(".menu-obory > div").css({"background-color":"#e3e3e3"});
+                $(".menu-obory > .search").css({"background-color":"#fff"});
                 $(".menu-obory > div a").css({"color":"#333"});
                 $(".info.informatika").show(500);
                 $(this).css({"background-color":"#45c9e1"});
@@ -72,6 +74,7 @@ var Cl = window.Cl || {};
         $(".info").click(function () {
              $(".info").hide();
              $(".menu-obory > div").css({"background-color":"#e3e3e3"});
+             $(".menu-obory > .search").css({"background-color":"#fff"});
              $(".menu-obory > div a").css({"color":"#333"});
         });
 
@@ -87,6 +90,13 @@ var Cl = window.Cl || {};
                  increase=true;
              }
         });
+
+        $(".panel-search").hide();
+        $(".search").click(function () {
+            $(".panel-search").toggle(500);
+        });
+
+        $(".obor-informatika").prevAll(".informatika").css({"background-color":"#45c9e1"});
 
     });
 

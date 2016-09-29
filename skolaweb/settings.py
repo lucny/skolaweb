@@ -185,7 +185,7 @@ INSTALLED_APPS = [
 
     'sorl.thumbnail',
     'djangocms_unitegallery',
-
+    'image_gallery',
     'skolaweb'
 ]
 

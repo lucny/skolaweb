@@ -139,9 +139,11 @@ header {
             margin-right: -10px;
             #navigation {
                 margin-top: 65px;
+                margin-right: -10px;
                 @media (max-width: $screen-md-max) {
                     margin-top: 52px;
-                }    
+                    margin-right: 0px;
+            }    
                 @media (max-width: $screen-sm-max) {
                     margin-top: 30px;
                 }    
@@ -500,12 +502,13 @@ dl.dl-horizontal {
         }
         .panel-title {
             border: none;
-            margin: 5px -10px 0px -10px;
+            margin: 5px 0px 0px 0px;
             a {
                 background-color: #555;
                 text-transform: uppercase;
                 color: white;
                 text-align: center;
+                margin: 0px -10px 0px -10px;
                 padding: 10px;
                 font-size: 20px;
                 font-weight: 400;
@@ -520,7 +523,6 @@ dl.dl-horizontal {
             }   
             a.collapsed {
                 background-color: #555;
-                margin: 0px -10px 0px -10px;
                 text-transform: uppercase;
                 color: white;
                 text-align: center;
@@ -837,3 +839,43 @@ h1.page-header {
     line-height: 1.2;
     margin: 0;
 }
+
+.panel-search {
+    background-color: white;
+    text-align: right;
+    margin-top: -30px;
+    .aldryn-newsblog-article-search {
+        padding-bottom: 0;
+    }
+    .article-search {
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    .aldryn-newsblog {
+        margin-bottom: 0px;
+    }
+    .search-results {
+        text-align: left;
+    }
+    .input-group {
+        /*display: inline;*/
+    }
+}
+
+.obor-informatika {
+        background-color: #45c9e1;
+        padding: 30px;
+        h2 {
+            color: white;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        h4 {
+            font-size: 18px;        
+            font-weight: 400;
+        }
+        p {
+            font-size: 16px;
+        }
+}    
