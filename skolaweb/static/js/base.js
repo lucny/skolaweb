@@ -92,10 +92,26 @@ var Cl = window.Cl || {};
         });
 
         $(".panel-search").hide();
-        $(".search").click(function () {
-            $(".panel-search").toggle(500);
-        });
-
+/*        $(".search").click(function () {
+            $(this).css({"width":"500px"});
+        });*/
+        $(".search-results").hide();
+        $(".search-results-visible").hide();
+/*        $(".aldryn-newsblog-article-search").find("button").click(function () {
+           // if ($(".search-results").text()) {
+                $(".search-results-visible").html($(".search-results").html());
+                $(".search-results-visible").show();
+            //}
+        })*/
+        $(".search-results").bind('DOMNodeInserted DOMNodeRemoved', function() {
+           // if ($(".search-results").text()) {
+                $(".search-results-visible").html($(".search-results").html());
+                $(".search-results-visible").show();
+            //}
+        })
+        $(".search-results-visible").click(function() {
+                $(".search-results-visible").hide();
+        })
         $(".obor-informatika").prevAll(".informatika").css({"background-color":"#45c9e1"});
 
     });

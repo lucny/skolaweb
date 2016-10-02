@@ -56,15 +56,20 @@
 </div>
 <div class="container submenu-obory">
     <div class="row menu-obory text-right">
-        <div class="col-sm-4 strojirenstvi"><a href="/strojirenstvi" class="obor-icon">Strojírenství</a></div>
-        <div class="col-sm-4 informatika"><a href="studium/informacni-technologie" class="obor-icon">Informační technologie</a></div>
-        <div class="col-sm-4 hracka"><a href="/hracka" class="obor-icon">Design hraček</a></div>
-        <div class="col-sm-4 design"><a href="/design" class="obor-icon">Průmyslový design</a></div>
-        <div class="col-sm-4 grafika"><a href="/grafika" class="obor-icon">Grafický design</a></div>
-        <div class="col-sm-4 search">HLEDEJ <i class="fa fa-search" aria-hidden="true"></i>
-            <!--<p class="input-group"><input type="text" class="form-control"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></p> -->
+        <div class="col-sm-4 menu-obor strojirenstvi"><a href="/strojirenstvi" class="obor-icon">Strojírenství</a></div>
+        <div class="col-sm-4 menu-obor informatika"><a href="studium/informacni-technologie" class="obor-icon">Informační technologie</a></div>
+        <div class="col-sm-4 menu-obor hracka"><a href="/hracka" class="obor-icon">Design hraček</a></div>
+        <div class="col-sm-4 menu-obor design"><a href="/design" class="obor-icon">Průmyslový design</a></div>
+        <div class="col-sm-4 menu-obor grafika"><a href="/grafika" class="obor-icon">Grafický design</a></div>
+        <div class="col-sm-4 search">
+            <div class="aldryn aldryn-newsblog aldryn-newsblog-article-search js-aldryn-newsblog-article-search main-search"><form action="/cs/skola/zpravy/search/" class="form-inline" method="get"><input name="csrfmiddlewaretoken" value="yOMgoi9HPyqxxqduodJKr1Y1jpPRrMaa" type="hidden"><input name="max_articles" value="10" type="hidden"><div class="input-group"><label for="field-11046-keyword" class="sr-only">Hledej</label><input name="q" class="form-control" id="field-11046-keyword" placeholder="Hledej" type="text"><span class="input-group-btn"><button type="submit" class="btn btn-primary"></button></span></div></form>
+                  <div class="search-results js-search-results"></div>
+            </div>
+            <!-- HLEDEJ <i class="fa fa-search" aria-hidden="true"></i>
+           <p class="input-group"><input type="text" class="form-control"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></p> -->
         </div>
     </div>
+    <div class="row text-left search-results-visible"></div>
 </div>
     <!--
 <ul>

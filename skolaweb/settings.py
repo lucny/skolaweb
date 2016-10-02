@@ -174,6 +174,9 @@ INSTALLED_APPS = [
     'parler',
     'sortedm2m',
     'taggit',
+    #'haystack',
+    #'aldryn_search',
+    #'spurl',
 
     'aldryn_style',
     'easy_thumbnails',
@@ -185,7 +188,7 @@ INSTALLED_APPS = [
 
     'sorl.thumbnail',
     'djangocms_unitegallery',
-    'image_gallery',
+    #'image_gallery',
     'skolaweb'
 ]
 
@@ -356,3 +359,22 @@ CMS_PAGE_CACHE = False
 CMS_PLUGIN_CACHE = False
 
 ALDRYN_BOOTSTRAP3_CAROUSEL_STYLES = "full"
+
+ALDRYN_NEWSBLOG_UPDATE_SEARCH_DATA_ON_SAVE = True
+
+ALDRYN_NEWSBLOG_SEARCH = True
+
+#HAYSTACK_CONNECTIONS = {
+#    'default': {
+#        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+#        'URL': 'http://127.0.0.1:8000/solr/cs/'
+#    },
+#    'en': {
+#        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+#        'URL': 'http://127.0.0.1:8000/solr/en/'
+#    },
+#    'cs': {
+#        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+#        'URL': 'http://127.0.0.1:8000/solr/cs/'
+#    },
+#}
