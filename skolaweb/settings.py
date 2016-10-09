@@ -226,9 +226,8 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
-    ('tpl_home.html', 'Homepage'),
     ('home.html', 'Home'),
-    ('itobor.html', 'ITobor'),
+    ('obory.html', 'Obory'),
 )
 
 CMS_PERMISSION = True
@@ -275,7 +274,7 @@ DATABASES = {
     'default':
         {
             'ENGINE': 'django.db.backends.mysql', #.sqlite3
-            'NAME': 'skolaweb',
+            'NAME': 'skola',
             'HOST': 'localhost',
             'USER': 'root',
             'PASSWORD': 'admin',

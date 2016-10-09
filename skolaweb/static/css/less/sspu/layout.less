@@ -1,0 +1,799 @@
+body {
+	padding: 0;
+	font-weight: 300;
+}
+
+#navigation {
+	.navbar {
+		padding-top: 20px;
+		border-radius: 0;
+		.navbar-nav {
+			background-color: white;
+		}
+	}
+	.dropdown-menu {
+		padding: 0;
+	}
+}
+
+.navbar-brand {
+	max-width: 400px;
+	img {
+		margin-top: 14px;
+	}	
+    @media (max-width: @screen-sm-max) {
+		max-width: 300px;
+		img {
+			margin-top: 39px;
+		}	
+    }
+    @media (max-width: @screen-xs-max) {
+		max-width: 250px;
+		img {
+			margin-top: 51px;
+		}	
+    }
+}
+
+.nav li a {
+	color: #333;
+    @media (max-width: @screen-md-max) {
+        font-size: 90%;
+    }
+    @media (max-width: @screen-sm-max) {
+        font-size: 80%;
+    }
+    @media (max-width: @screen-xs-max) {
+        font-size: 100%;
+    }
+}
+
+.menu-obory {
+    /*background-color: #e3e3e3;*/
+    .row {
+    	line-height: 1;
+    }
+
+    ul {
+    	padding-left: 0;
+    	padding-right: 0;
+    	margin-bottom: 0;
+  	    background-color: #e3e3e3;
+        li {
+	    	padding-left: 0;
+    		padding-right: 0;
+        }
+
+    }
+    .obor-icon {
+        display: block;
+        color: #333;
+        font-weight: 600;
+        margin-top: @line-height-computed * 0.7;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 80%;
+        @media (max-width: @screen-md-max) {
+            min-height: @line-height-computed * 1.2;
+            font-size: 70%;
+        }
+        @media (max-width: @screen-sm-max) {
+            min-height: @line-height-computed * 1.2;
+            font-size: 60%;
+        }
+        @media (max-width: @screen-xs-max) {
+            min-height: @line-height-computed; 
+            font-size: 80%;
+        }
+    } 
+
+    .obor {
+        display: inline-block;
+        width: 19.72%;
+        padding-bottom: 10px;
+        background-color: #e3e3e3;
+        background-image: url("../img/obory-arrow.png");
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 20px 20px;
+   /*     padding-left: 10px;
+        padding-right: 10px;*/
+        &.search {            
+	        display: inline-block;
+            padding: 10px;
+            background-image: none;
+            background-color: white;
+            color: #333;
+            p {
+                margin-bottom: 0;
+                input {
+                    &.form-control {
+                        width: 85%;
+                        height: 30px;
+                        font-size: 13px;
+                        line-height: 1.2;
+                        background-color: #e3e3e3;
+                    }
+                }
+                a {
+                    color: #333;
+                }
+            }
+        }
+        @media (max-width: @screen-md-max) {
+	        width: 19.64%;
+            max-height: 40px;
+        }
+        @media (max-width: @screen-sm-max) {
+	        width: 19.54%;
+            max-height: 40px;
+        }
+        @media (max-width: @screen-xs-max) {
+            display: none;
+            width: 100%;
+            max-height: 50px;
+        }
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    .strojirenstvi:hover {
+        background-color: #003052;
+        a {
+            color: white;
+        }
+    } 
+    .informatika:hover {
+        background-color: #45c9e1;
+        a {
+            color: white;
+        }
+    } 
+    .hracka:hover {
+        background-color: #f1a0a1;
+        a {
+            color: white;
+        }
+    } 
+    .design:hover {
+        background-color: #b7d868;
+        a {
+            color: white;
+        }
+    } 
+    .grafika:hover {
+        background-color: #c6379c;
+        a {
+            color: white;
+        }
+    }     
+}
+
+.search {
+	p {
+		margin: 0;
+	}
+}
+
+.header-block-left {
+	padding-right: 0;
+    @media (max-width: @screen-sm-max) {
+		padding-right: 15px;
+    }
+}
+
+.header-block-right {
+	padding-left: 0;
+    @media (max-width: @screen-sm-max) {
+		display: none;
+    }
+}
+
+.obor-uvod {
+	padding: 20px 50px;
+	h2 {
+		font-size: 140%;
+		font-weight: 500;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	h4 {
+		font-size: 110%;
+	}
+}
+
+#main {
+	.row {
+		margin: 0;
+	}
+
+	.nopadding {
+		padding: 0;
+	}
+
+	.padding {
+		padding: -15px;
+	}
+
+	h2 {
+        background-color: #555;
+        margin: 0px 0px 20px 0px;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        padding: 15px 10px 10px 10px;
+        font-size: 20px;
+        font-weight: 400;		
+	}
+	.frontpage-actual {
+	    .aldryn-newsblog-article {
+	    	.row.inner {
+	    		margin: 0;
+	    	}
+
+	        padding-bottom: 0;
+	        h2 {
+	            color: darken(#45c9e1,20%);
+	            background-color: white;
+	            border-bottom: none;
+	            a {
+	                font-size: 18px;  
+	            }          
+	        }       
+	        h3 {
+	        	margin: 0;
+	            background-color: white;
+		        text-transform: uppercase;
+	            a {
+	                font-size: 22px;  
+	            }          
+	        }       
+	        p {
+	            font-size: 16px;
+	        }
+	        .category {
+	        	font-size: 14px;
+	        	text-transform: uppercase;
+	        	a {
+	        		color: @brand-info;
+	        	}
+	        }
+	        .foto {
+	        	padding-left: 0;
+	        }        
+	        .obsah {
+	        	padding-right: 0;
+	        }        
+	    }
+	}	
+}
+
+#sidebar {
+	position: relative;
+	background-color: white;
+	right: 0;
+	z-index: 100;
+}
+
+.footer {
+	margin-top: 20px;
+	padding: 15px;
+	background-color: @gray-light; 
+}
+
+.footer-theme {
+	margin-top: 30px;
+	border-top: 1px dotted @gray-light;
+	padding: 15px;
+	img {
+		opacity: 0.5;
+	}
+}
+
+
+.frontpage-featured {
+	margin: 0;
+	background-color: #e3e3e3;
+}
+
+.frontpage-info {
+    background-color: #e3e3e3;
+/*    h2 {
+        background-color: #555;
+        margin: 0px -15px 20px -15px;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 400;
+    }*/
+    img {
+    	display: none;
+    }
+    .aldryn-newsblog-article {
+        padding: 0px 15px;
+        font-weight: 400;
+        h3 {
+            padding-left: 40px;
+            font-size: 18px;  
+            min-height: 20px;
+            text-transform: uppercase;
+            background-image: url("../img/aktuality-logo-sede.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 32px 18px;
+            a {
+                color: #e31e24;
+                font-weight: 300;
+            }          
+        }       
+        p {
+            font-size: 15px;
+            padding-left: 40px;
+        }
+    }
+    .aldryn-newsblog-meta {
+        padding-bottom: 0;
+    }
+}
+
+.frontpage-aktuality {
+    background-color: #e3e3e3;
+/*    h2 {
+        background-color: #555;
+        margin: 0px -15px 20px -15px;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 20px 20px;        
+    } */
+    img {
+    	display: none;
+    }    
+    .aldryn-newsblog-article {
+        padding: 0px 15px;
+        h3 {
+            padding-left: 40px;
+            font-size: 18px;  
+            min-height: 20px;
+            background-image: url("../img/aktuality-logo.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 32px 18px;
+            a {
+                color: #ae4a84;
+                font-weight: 300;
+            }          
+        }       
+        p {
+            font-size: 15px;
+            padding-left: 40px;
+        }
+    }
+    .aldryn-newsblog-meta {
+        padding-bottom: 0;
+    }
+}
+
+.aldryn-newsblog-article-search {
+	padding-top: 5px;
+}
+
+.aldryn-newsblog-article-search .results-list .unpublished,
+.aldryn-newsblog-article.unpublished {
+    background: #f9fcee url('/static/img/aldryn_newsblog/unpublished.png') repeat;
+}
+
+.aldryn-newsblog-article-search .results-list .future,
+.aldryn-newsblog-article.future {
+    background: #eefcfc url('/static/img/aldryn_newsblog/future.png') repeat;
+}
+
+.search-results {
+	padding-top: 20px;
+	h3 {
+		display: none;
+	}
+}
+
+#search-open {
+	width: 100%;
+	margin-top: 5px;
+}
+
+#search-close {
+}
+
+
+.frontpage-actual {
+    h2 {
+        /*background-color: darken(#45c9e1,20%);
+        color: white;*/
+        color: @gray-darker;
+        text-align: left;
+        border-bottom: 1px solid @gray-darker;
+        padding-bottom: 10px;
+        font-size: 30px;
+    }
+    .aldryn-newsblog-article {
+    	.row.inner {
+    		margin: 0 -15px;
+    	}
+
+        padding-bottom: 0;
+        h2 {
+            color: darken(#45c9e1,20%);
+            background-color: white;
+            border-bottom: none;
+            a {
+/*                color: #c6379c;*/
+                font-size: 18px;  
+            }          
+        }       
+        h3 {
+        	margin: 0;
+            background-color: white;
+            a {
+/*                color: #c6379c;*/
+                font-size: 22px;  
+            }          
+        }       
+        p {
+            font-size: 16px;
+        }
+        .category {
+        	font-size: 14px;
+        	text-transform: uppercase;
+        	a {
+        		color: @brand-info;
+        	}
+        }        
+    }
+}
+
+.obor-uvod {
+	h1 {
+		color: white;
+		font-size: 24px;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+
+
+.strojirenstvi {
+	.navbar {
+ 	    background-color: @brand-primary;
+		.navbar-nav {
+			background-color: @brand-primary;
+		    > li > a {
+				background-color: @brand-primary;
+				color: @gray-lighter;
+		      &:hover,
+		      &:focus {
+				background-color: @brand-primary;
+				color: @gray-lighter;
+		      }
+		    }
+		    > .active > a {
+		      &,
+		      &:hover,
+		      &:focus {
+				background-color: @brand-primary;
+				color: @gray-lighter;
+		      }
+		    }
+	      .open .dropdown-menu {
+	        > li > a {
+				background-color: @brand-primary;
+				color: @gray-lighter;
+	          &:hover,
+	          &:focus {
+				color: @brand-primary;
+				background-color: @gray-lighter;
+	          }
+	        }
+	        > .active > a {
+	          &,
+	          &:hover,
+	          &:focus {
+				color: @brand-primary;
+				background-color: @gray-lighter;
+	          }
+	        }
+	        > .disabled > a {
+	          &,
+	          &:hover,
+	          &:focus {
+	            color: @navbar-inverse-link-disabled-color;
+	            background-color: @navbar-inverse-link-disabled-bg;
+	          }
+	        }
+	      }
+		}
+	}
+	.obor.strojirenstvi	{
+		background-color: @brand-primary;
+		a {
+			color: white;
+		}
+	}
+
+	.obor-uvod {
+		background-color: @brand-primary;
+		color: #aaa;
+		a {
+			color: @brand-info;
+		}
+	}
+}
+
+.informatika {
+	.navbar {
+ 	    background-color: @brand-info;
+		.navbar-nav {
+			background-color: @brand-info;
+		    > li > a {
+				background-color: @brand-info;
+				color: @gray;
+		      &:hover,
+		      &:focus {
+				background-color: @brand-info;
+				color: @gray;
+		      }
+		    }
+		    > .active > a {
+		      &,
+		      &:hover,
+		      &:focus {
+				background-color: @brand-info;
+				color: @gray;
+		      }
+		    }
+	      .open .dropdown-menu {
+	        > li > a {
+				background-color: @brand-info;
+				color: @gray;
+	          &:hover,
+	          &:focus {
+				color: @brand-info;
+				background-color: @gray;
+	          }
+	        }
+	        > .active > a {
+	          &,
+	          &:hover,
+	          &:focus {
+				color: @brand-info;
+				background-color: @gray;
+	          }
+	        }
+	        > .disabled > a {
+	          &,
+	          &:hover,
+	          &:focus {
+	            color: @navbar-inverse-link-disabled-color;
+	            background-color: @navbar-inverse-link-disabled-bg;
+	          }
+	        }
+	      }
+		}
+	}
+	.obor.informatika	{
+		background-color: @brand-info;
+	}
+
+	.obor-uvod {
+		background-color: @brand-info;
+		color: #333;
+		a {
+			color: @brand-primary;
+		}
+	}
+}
+
+.hracka {
+	.navbar {
+ 	    background-color: @brand-warning;
+		.navbar-nav {
+			background-color: @brand-warning;
+		    > li > a {
+				background-color: @brand-warning;
+				color: @gray;
+		      &:hover,
+		      &:focus {
+				background-color: @brand-warning;
+				color: @gray;
+		      }
+		    }
+		    > .active > a {
+		      &,
+		      &:hover,
+		      &:focus {
+				background-color: @brand-warning;
+				color: @gray;
+		      }
+		    }
+	      .open .dropdown-menu {
+	        > li > a {
+				background-color: @brand-warning;
+				color: @gray;
+	          &:hover,
+	          &:focus {
+				color: @brand-warning;
+				background-color: @gray;
+	          }
+	        }
+	        > .active > a {
+	          &,
+	          &:hover,
+	          &:focus {
+				color: @brand-warning;
+				background-color: @gray;
+	          }
+	        }
+	        > .disabled > a {
+	          &,
+	          &:hover,
+	          &:focus {
+	            color: @navbar-inverse-link-disabled-color;
+	            background-color: @navbar-inverse-link-disabled-bg;
+	          }
+	        }
+	      }
+		}
+	}
+	.obor.hracka	{
+		background-color: @brand-warning;
+	}
+
+	.obor-uvod {
+		background-color: @brand-warning;
+		color: #333;
+		a {
+			color: @brand-info;
+		}
+	}
+}
+
+.design {
+	.navbar {
+ 	    background-color: @brand-success;
+		.navbar-nav {
+			background-color: @brand-success;
+		    > li > a {
+				background-color: @brand-success;
+				color: @gray;
+		      &:hover,
+		      &:focus {
+				background-color: @brand-success;
+				color: @gray;
+		      }
+		    }
+		    > .active > a {
+		      &,
+		      &:hover,
+		      &:focus {
+				background-color: @brand-success;
+				color: @gray;
+		      }
+		    }
+	      .open .dropdown-menu {
+	        > li > a {
+				background-color: @brand-success;
+				color: @gray;
+	          &:hover,
+	          &:focus {
+				color: @brand-success;
+				background-color: @gray;
+	          }
+	        }
+	        > .active > a {
+	          &,
+	          &:hover,
+	          &:focus {
+				color: @brand-success;
+				background-color: @gray;
+	          }
+	        }
+	        > .disabled > a {
+	          &,
+	          &:hover,
+	          &:focus {
+	            color: @navbar-inverse-link-disabled-color;
+	            background-color: @navbar-inverse-link-disabled-bg;
+	          }
+	        }
+	      }
+		}
+	}
+	.obor.design	{
+		background-color: @brand-success;
+	}
+
+	.obor-uvod {
+		background-color: @brand-success;
+		color: #333;
+		a {
+			color: @brand-info;
+		}
+	}
+}
+
+.grafika {
+	.navbar {
+ 	    background-color: @brand-danger;
+		.navbar-nav {
+			background-color: @brand-danger;
+		    > li > a {
+				background-color: @brand-danger;
+				color: @gray-lighter;
+		      &:hover,
+		      &:focus {
+				background-color: @brand-danger;
+				color: @gray-lighter;
+		      }
+		    }
+		    > .active > a {
+		      &,
+		      &:hover,
+		      &:focus {
+				background-color: @brand-danger;
+				color: @gray-lighter;
+		      }
+		    }
+	      .open .dropdown-menu {
+	        > li > a {
+				background-color: @brand-danger;
+				color: @gray-lighter;
+	          &:hover,
+	          &:focus {
+				color: @brand-danger;
+				background-color: @gray-lighter;
+	          }
+	        }
+	        > .active > a {
+	          &,
+	          &:hover,
+	          &:focus {
+				color: @brand-danger;
+				background-color: @gray-lighter;
+	          }
+	        }
+	        > .disabled > a {
+	          &,
+	          &:hover,
+	          &:focus {
+	            color: @navbar-inverse-link-disabled-color;
+	            background-color: @navbar-inverse-link-disabled-bg;
+	          }
+	        }
+	      }
+		}
+	}
+	.obor.grafika	{
+		background-color: @brand-danger;
+		a {
+			color: white;
+		}
+	}
+
+	.obor-uvod {
+		background-color: @brand-danger;
+		color: #ddd;
+		a {
+			color: @brand-success;
+		}
+	}
+}

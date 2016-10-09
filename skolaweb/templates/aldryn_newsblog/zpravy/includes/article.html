@@ -2,6 +2,8 @@
 
 <article class="aldryn-newsblog-article{% if article.is_featured %} aldryn-newsblog-featured{% endif %}{% if not article.published %} unpublished{% endif %}{% if article.future %} future{% endif %}">
     {% if article.featured_image_id %}
+        <div class="row">
+        <div class="col-sm-4">
         <p class="visual">
             {% if not detail_view %}
                 <a href="{{ article.get_absolute_url }}">
@@ -15,8 +17,10 @@
                 </a>
             {% endif %}
         </p>
+        </div>
     {% endif %}
 
+    <div class="col-sm-8">
     {% if article.categories %}
         <p class="category">
             {% for category in article.categories.all %}
@@ -59,6 +63,8 @@
             {% render_placeholder article.content language placeholder_language %}
         </div>
     {% endif %}
+        </div>
+        </div>
 </article>
 {% addtoblock "css" %}
 <style>

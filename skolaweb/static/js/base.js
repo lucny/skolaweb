@@ -34,86 +34,37 @@ var Cl = window.Cl || {};
             });
         }
 
+        $("#search-close").hide();
+        $(".aldryn-newsblog-article-search").hide();
 
-        $(".ucitel-detail").hide();
-        $(".ucitel-jmeno").click(function(){
-            var bgcolor = $(this).css("background-color");
-            var color = $(this).css("color");
-            $(this).css({"background-color": color});
-            $(this).css({"color": bgcolor});
-            $(this).siblings(".ucitel-detail").toggle(500);
+        $("#search-open").click(function () {
+           $(".aldryn-newsblog-article-search").show();
+           $("#main").attr("class","col-xs-8");
+           $("#sidebar").attr("class","col-xs-4");
+           $(".menu-obory").hide();
+           $(this).hide();
+            $("#search-close").show();
         });
 
-        $(".info").hide();
-
-        var screen = $(window);
-        $(".menu-obory > .strojirenstvi").click(function () {
-            if (screen.width() > 1000) {
-                $(".info").hide();
-                $(".menu-obory > div").css({"background-color":"#e3e3e3"});
-                $(".menu-obory > .search").css({"background-color":"#fff"});
-                $(".menu-obory > div a").css({"color":"#333"});
-                $(".info.strojirenstvi").show(500);
-                $(this).css({"background-color":"#003052"});
-                $(this).children("a").css({"color":"white"});
-            }
-        });
-
-        $(".menu-obory > .informatika").click(function () {
-            if (screen.width() > 1000) {
-                $(".info").hide();
-                $(".menu-obory > div").css({"background-color":"#e3e3e3"});
-                $(".menu-obory > .search").css({"background-color":"#fff"});
-                $(".menu-obory > div a").css({"color":"#333"});
-                $(".info.informatika").show(500);
-                $(this).css({"background-color":"#45c9e1"});
-                $(this).children("a").css({"color":"white"});
-            }
-        });
-
-        $(".info").click(function () {
-             $(".info").hide();
-             $(".menu-obory > div").css({"background-color":"#e3e3e3"});
-             $(".menu-obory > .search").css({"background-color":"#fff"});
-             $(".menu-obory > div a").css({"color":"#333"});
-        });
-
-        var increase = true;
-        $(".frontpage-aktuality").click(function () {
-             if (increase) {
-                 $(".main-block").animate({width: "100%"}, 500);
-                 $(".frontpage-sidebar").hide();
-                 increase=false;
-             } else {
-                 $(".main-block").animate({width: "83.33333%"}, 500);
-                 $(".frontpage-sidebar").show();
-                 increase=true;
-             }
-        });
-
-        $(".panel-search").hide();
-/*        $(".search").click(function () {
-            $(this).css({"width":"500px"});
+/*        $("#main").click(function () {
+           $("#main").attr("class","col-sm-10 col-xs-11");
+           $("#sidebar").attr("class","col-sm-2 col-xs-1");
+           $(".menu-obory").show();
         });*/
-        $(".search-results").hide();
-        $(".search-results-visible").hide();
-/*        $(".aldryn-newsblog-article-search").find("button").click(function () {
-           // if ($(".search-results").text()) {
-                $(".search-results-visible").html($(".search-results").html());
-                $(".search-results-visible").show();
-            //}
-        })*/
-        $(".search-results").bind('DOMNodeInserted DOMNodeRemoved', function() {
-           // if ($(".search-results").text()) {
-                $(".search-results-visible").html($(".search-results").html());
-                $(".search-results-visible").show();
-            //}
-        })
-        $(".search-results-visible").click(function() {
-                $(".search-results-visible").hide();
-        })
-        $(".obor-informatika").prevAll(".informatika").css({"background-color":"#45c9e1"});
 
-    });
+        $(".aldryn-newsblog-article-search .form-inline").submit(function(e){
+            $("#search-close").show();
+        });
 
+        $("#search-close").click(function () {
+           $("#main").attr("class","col-sm-10 col-xs-10");
+           $("#sidebar").attr("class","col-sm-2 col-xs-2");
+           $(".menu-obory").show();
+           $(".search-results").html("");
+           $(this).hide();
+           $("#search-open").show();
+           $(".aldryn-newsblog-article-search").hide();
+        });
+
+    })
 })(jQuery);

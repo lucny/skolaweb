@@ -1,49 +1,31 @@
 {% extends "base_root.html" %}
 {% load i18n staticfiles cms_tags menu_tags sekizai_tags %}
-
-{% block body_class %}tpl-base{% endblock %}
-
 {% block extend_root %}
-{% block header %}
-{# INFO: navbar concept: http://getbootstrap.com/components/#navbar #}
-<header class="container navbar navbar-head js-navbar-head">
-        {# INFO: the logo should be placed first for seo reasons #}
-        <div class="row">
-            <div class="navbar-header col-sm-12">
-                {# INFO: the logo should be placed first for seo reasons #}
-                <!--<div class="col-sm-8 col-xs-6">
-                        <a href="/">
-                            <img src="{% static "img/logo-skola.png" %}" alt="{{ request.site.name }}" class="img-responsive" />
-                        </a>
-                </div>-->
-                <div class="col-sm-24 col-xs-24">
-                    <a href="/">
-                          <img src="{% static "img/logo-skola.png" %}" alt="{{ request.site.name }}" class="img-responsive" />
-                    </a>
-                    <!--<h1 class="navbar-brand">
-                        <a href="/">
-                            <span>Střední škola průmyslová <br>a umělecká Opava{{ request.site.name }}</span>
-                        </a>
-                    </h1>-->
-                    <button type="button" class="navbar-toggle navbar-inverse collapsed" data-toggle="collapse" data-target=".js-navbar-header">
-                        {% for row in 123|make_list %}<span class="icon-bar"></span>{% endfor %}
+<div class="{% block obor %}{% placeholder 'obor' or %}skola{% endplaceholder %}{% endblock obor %}">
+{% block navigation %}
+        <!-- Navigation -->
+<header>
+        <div class="container" id="navigation">
+            <nav class="navbar" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                     </button>
+                    {% block logo %}
+                        {% placeholder "logo" or %}
+                        <a class="navbar-brand" href="/">
+                            <img src="{% static 'img/logo-skoly-rgb.png' %}" alt="{{ request.site.name }}" class="img img-responsive"/>
+                        </a>
+                        {% endplaceholder %}
+                    {% endblock logo %}
                 </div>
-            </div>
-            <div class="col-sm-12 col-xs-24">
-            {# INFO: ensure the anchor names are callable #}
-                <h2 class="sr-only">{% trans "Shortcuts" %}</h2>
-                <ul class="skip-links">
-                    <li><a href="/" title="[Alt + 0]" accesskey="0">{% trans "Go to home" %}</a></li>
-                    <li><a href="#navigation" title="[Alt + 1]" accesskey="1">{% trans "Jump to navigation" %}</a></li>
-                    <li><a href="#content" title="[Alt + 2]" accesskey="2">{% trans "Jump to content" %}</a></li>
-                    <li><a href="#footer" title="[Alt + 3]" accesskey="3">{% trans "Contact" %}</a></li>
-                </ul>
-
-                <div class="collapse navbar-collapse js-navbar-header">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     {% block navbar %}
-                    <nav class="nav navbar-main navbar-right" id="navigation">
-                        <h2 class="sr-only">{% trans "Navigation" %}</h2>
                         {% render_model_block request.current_page "changelist" %}
                         {% with dropdown="true" %}
                         <ul class="nav navbar-nav">
@@ -54,42 +36,30 @@
                         </ul>
                         {% endwith %}
                         {% endrender_model_block %}
-                    </nav>
                     {% endblock navbar %}
-                </div>
-            </div>
-        </div>
-</header>
-{% endblock header %}
 
-<!-- start: content -->
-<hr class="sr-only" />
-<div class="container feature">
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <!-- /.container -->
+{% endblock navigation %}
+
+{% block header %}
     {% block feature %}
         {% placeholder "feature" or %}
-            <div class="feature-visual">
-                <img src="{% static 'img/visuals/skola-default.jpg' %}" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>{{ request.current_page.get_page_title }}</h1>
+                    </div>
+                </div>
             </div>
         {% endplaceholder %}
     {% endblock feature %}
-</div>
-<div class="container submenu-obory">
-    <div class="row menu-obory text-right">
-        <div class="col-sm-4 strojirenstvi"><a href="/strojirenstvi" class="obor-icon">Strojírenství</a></div>
-        <div class="col-sm-4 informatika"><a href="/informacni-technologie" class="obor-icon">Informační technologie</a></div>
-        <div class="col-sm-4 hracka"><a href="/hracka" class="obor-icon">Design hraček</a></div>
-        <div class="col-sm-4 design"><a href="/design" class="obor-icon">Průmyslový design</a></div>
-        <div class="col-sm-4 grafika"><a href="/grafika" class="obor-icon">Grafický design</a></div>
-        <div class="col-sm-4 search"><p class="input-group"><input type="text" class="form-control"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></p></div>
-    </div>
-</div>
-
-    <!--
-<ul>
-    {% show_sub_menu 2 None 2 %}
-</ul>
--->
-
+{% endblock header %}
+</header>
+<!-- start: content -->
 {% block messages %}
 {% if messages %}
 <!-- start: messages -->
@@ -101,23 +71,48 @@
 {% endblock messages %}
 
 {% block extend_base %}
-    {% block content %}{% endblock %}
+{% block content %}
+    <div class="container">
+            <div class="row">
+                <div id="main" class="col-sm-10 col-xs-10">
+    {% block menu %}{% endblock menu %}
+ 	{% placeholder "content" or %}
+            <!-- Page Heading/Breadcrumbs -->
+    {% endplaceholder %}
+                </div>
+                <div id="sidebar" class="col-sm-2 col-xs-2">
+                    <div class="text-right"><button id="search-open" type="submit" class="btn btn-default"><i class="fa fa-search fa-1g" aria-hidden="true"></i>  Hledat</button></div>
+                    {% block sidebar %}
+                    <div class="aldryn aldryn-newsblog aldryn-newsblog-article-search js-aldryn-newsblog-article-search">
+                        <form action="/cs/skola/zpravy/search/" class="form-inline" method="get">
+                            <input name="csrfmiddlewaretoken" value="rud7RR3OsnBOJjgZa1Pgk69PPLB2PzJg" type="hidden">
+                            <input name="max_articles" value="10" type="hidden">
+                            <div class="input-group">
+                                <label for="field-1085-keyword" class="sr-only">Hledej</label>
+                                <input name="q" class="form-control" id="field-1085-keyword" placeholder="Hledej" type="text">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                        <div class="search-results js-search-results"></div>
+                    </div>
+                    <button id="search-close" type="submit" class="btn btn-default"><i class="fa fa-close fa-1g" aria-hidden="true"></i>  Zavřít </button>
+                     	{% placeholder "sidebar" or %}
+                        {% endplaceholder %}
+                    {% endblock sidebar %}
+                </div>
+            </div>
+    </div>
+{% endblock content %}
 {% endblock extend_base %}
 <hr class="sr-only" />
 <!-- end: content -->
-
+</div>
 {% block footer %}
 <!-- start: footer -->
-<footer class="footer">
-    <h2 class="sr-only" id="footer">{% trans "Sitemap" %}</h2>
-
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <p class="footer-logo">Střední škola průmyslová a umělecká Opava, příspěvková organizace</p>
-                </div>
-            </div>
+<footer class="container">
+    <div class="footer">
             {% render_model_block request.current_page "changelist" %}
             <ul class="list-inline">
                 <li class="pull-right"><a href="#page-top" data-spy="scroll">{% trans "Back to top" %} <span class="fa fa-right fa-arrow-up"></span></a></li>
@@ -125,9 +120,7 @@
             </ul>
             {% endrender_model_block %}
             {% static_placeholder "footer" %}
-        </div>
     </div>
-
     <div class="footer-theme">
             {% static_placeholder "footer-theme" %}
     </div>

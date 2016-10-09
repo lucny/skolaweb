@@ -4,7 +4,7 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-md-16">
+            <div class="col-md-8">
                 {% if view.show_header %}
                     {% static_placeholder "newsblog_feature" %}
                 {% endif %}
@@ -13,7 +13,7 @@
                     {% block newsblog_footer %}{% endblock %}
                 </div>
             </div>
-            <div class="col-md-8 aldryn-newsblog aldryn-newsblog-sidebar">
+            <div class="col-md-4 aldryn-newsblog aldryn-newsblog-sidebar">
                 {% static_placeholder "newsblog_sidebar" %}
                 {% block newsblog_sidebar %}{% endblock %}
             </div>

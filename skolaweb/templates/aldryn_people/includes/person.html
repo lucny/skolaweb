@@ -6,21 +6,21 @@
             {% if instance.show_links %}
                 <a href="{{ person.get_absolute_url }}">
             {% endif %}
-                <img src="{% thumbnail person.visual 400x300 crop subject_location=person.visual.subject_location %}" alt="{{ person.name }}">
+                <img src="{% thumbnail person.visual 400x300 crop subject_location=person.visual.subject_location %}" alt="{{ person.name }}" align="left" height="80">
             {% if instance.show_links %}
                 </a>
             {% endif %}
         </p>
     {% endif %}
 
-    {% if not group %}<h2>{% else %}<h3>{% endif %}
+    {% if not group %}<h3>{% else %}<h4>{% endif %}
         {% if not detail_view %}
             <a href="{{ person.get_absolute_url }}">{{ person.name }}</a>
         {% else %}
             {% render_model person 'name' %}
         {% endif %}
         <small>{{ person.function }}</small>
-    {% if not group %}</h2>{% else %}</h3>{% endif %}
+    {% if not group %}</h4>{% else %}</h3>{% endif %}
 
     <p class="meta">
         {% if person.phone %}

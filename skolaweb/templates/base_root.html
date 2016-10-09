@@ -18,24 +18,24 @@
     {% endblock meta_tags %}
     <link rel="apple-touch-icon" href="{% static 'favicon.png' %}">
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">-->
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if IE]><link rel="shortcut icon" href="{% static 'favicon.ico' %}"><![endif]-->
-    <style>
-        body { visibility: hidden; }
-        @media (max-width: 600px) {
-            body { visibility: visible; }
-            .feature-visual img { width: 100%; }
-            .sr-only, .skip-links, .navbar-collapse { display: none; }
-        }
-    </style>
     <!--[if lt IE 9]>
     <script src="{% static 'js/libs/html5shiv.min.js' %}"></script>
     <script src="{% static 'js/libs/respond.min.js' %}"></script>
     <![endif]-->
     {% render_block "css" %}
     {% block extrahead %}{% endblock %}
-    {{ ALDRYN_SNAKE.render_head }}
 </head>
-<body id="page-top" class="noscript lang-{{ LANGUAGE_CODE }} {% block body_class %}tpl-root{% endblock %}">
+
+<body id="page-top" class="noscript lang-{{ LANGUAGE_CODE }}">
 {% include "includes/analytics.html" %}
 {% cms_toolbar %}
 
@@ -43,7 +43,7 @@
 
 {# prevent blocking css for page speed reasons #}
 <noscript id="deferred-styles">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <!--  <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
 </noscript>
 <script>
     var loadDeferredStyles = function() {
@@ -64,10 +64,11 @@
 <script src="{% static 'js/libs/class.min.js' %}"></script>
 <script src="{% static 'js/libs/outdatedBrowser.min.js' %}"></script>
 <script src="{% static 'js/addons/cl.utils.js' %}"></script>
+<script src="{% static 'js/addons/cl.newsblog.js' %}"></script>
+<script src="{% static 'js/addons/cl.explorer.js' %}"></script>
 <script src="{% static 'js/base.js' %}"></script>
 {% render_block "js" %}
 {% block extrafoot %}{% endblock %}
-{{ ALDRYN_SNAKE.render_tail }}
 <div class="browser-outdated" id="outdated" hidden="hidden">
     <noscript><h3>{% trans "Please enable JavaScript" %}</h3></noscript>
     <h3>{% trans "Your browser is out-of-date!" %}</h3>
