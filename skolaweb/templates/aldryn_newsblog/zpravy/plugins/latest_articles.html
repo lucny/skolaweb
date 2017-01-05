@@ -4,11 +4,13 @@
     {% for article in article_list %}
         {% if request.current_page.get_page_title == "Úvodní stránka" %}
             {% include "aldryn_newsblog/zpravy/includes/article-new.html" with namespace=instance.app_config.namespace %}
+            {% if not forloop.last %}<hr>{% endif %}
         {% endif %}
         {% if request.current_page.get_page_title == "Strojírenství" %}
             {% for category in article.categories.all %}
                 {% if category.name == "Strojírenství" %}
                     {% include "aldryn_newsblog/zpravy/includes/article-new.html" with namespace=instance.app_config.namespace %}
+                    <hr>
                 {% endif %}
             {% endfor %}
         {% endif %}
@@ -16,27 +18,31 @@
             {% for category in article.categories.all %}
                 {% if category.name == "Informační technologie" %}
                     {% include "aldryn_newsblog/zpravy/includes/article-new.html" with namespace=instance.app_config.namespace %}
+                    <hr>
                 {% endif %}
             {% endfor %}
         {% endif %}
         {% if request.current_page.get_page_title == "Design hraček" %}
             {% for category in article.categories.all %}
-                {% if category.name == "Design hraček" %}
+                {% if category.name == "Design hraček" or category.name == "Umělecké obory" %}
                     {% include "aldryn_newsblog/zpravy/includes/article-new.html" with namespace=instance.app_config.namespace %}
+                    <hr>
                 {% endif %}
             {% endfor %}
         {% endif %}
         {% if request.current_page.get_page_title == "Průmyslový design" %}
             {% for category in article.categories.all %}
-                {% if category.name == "Průmyslový design" %}
+                {% if category.name == "Průmyslový design" or category.name == "Umělecké obory" %}
                     {% include "aldryn_newsblog/zpravy/includes/article-new.html" with namespace=instance.app_config.namespace %}
+                    <hr>
                 {% endif %}
             {% endfor %}
         {% endif %}
         {% if request.current_page.get_page_title == "Grafický design" %}
             {% for category in article.categories.all %}
-                {% if category.name == "Grafický design" %}
+                {% if category.name == "Grafický design" or category.name == "Umělecké obory" %}
                     {% include "aldryn_newsblog/zpravy/includes/article-new.html" with namespace=instance.app_config.namespace %}
+                    <hr>
                 {% endif %}
             {% endfor %}
         {% endif %}

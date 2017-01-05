@@ -18,17 +18,19 @@
             <a href="{{ person.get_absolute_url }}">{{ person.name }}</a>
         {% else %}
             {% render_model person 'name' %}
-        {% endif %}
+        {% endif %}<br>
         <small>{{ person.function }}</small>
     {% if not group %}</h4>{% else %}</h3>{% endif %}
 
     <p class="meta">
         {% if person.phone %}
-            <strong>{% trans "Phone:" %}</strong>
+            <span class="fa fa-fw fa-phone" aria-hidden="true"></span>
+<!--            <strong>{% trans "Phone:" %}</strong> -->
             {{ person.phone|phoneformat }}<br>
         {% endif %}
         {% if person.mobile %}
-            <strong>{% trans "Mobile:" %}</strong>
+            <span class="fa fa-fw fa-phone" aria-hidden="true"></span>
+<!--            <strong>{% trans "Mobile:" %}</strong> -->
             {{ person.mobile|phoneformat }}<br>
         {% endif %}
         {% if person.fax %}
@@ -36,12 +38,12 @@
             {{ person.fax }}<br>
         {% endif %}
         {% if person.email %}
-            <strong>{% trans "Email:" %}</strong>
+<!--        <strong>{% trans "Email:" %}</strong> -->
             <span class="fa fa-fw fa-envelope" aria-hidden="true"></span>
             <a href="mailto:{{ person.email }}">{{ person.email }}</a><br>
         {% endif %}
         {% if person.website %}
-            <strong>{% trans "Website:" %}</strong>
+<!--            <strong>{% trans "Website:" %}</strong> -->
             <span class="fa fa-fw fa-globe" aria-hidden="true"></span>
             <a href="{{ person.website }}" target="_blank">{{ person.website }}</a><br>
         {% endif %}

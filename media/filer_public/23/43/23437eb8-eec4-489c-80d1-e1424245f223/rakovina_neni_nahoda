@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+
+<head>
+  <title>Přednáška o onkologických problémech - Rakovina není náhoda | SŠPU Opava</title>
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/themes/foliage/favicon.ico" type="image/x-icon" />
+  <style type="text/css" media="all">@import "/modules/gallery/drupal_g2.css";</style>
+<style type="text/css" media="all">@import "/modules/node/node.css";</style>
+<style type="text/css" media="all">@import "/modules/system/defaults.css";</style>
+<style type="text/css" media="all">@import "/modules/system/system.css";</style>
+<style type="text/css" media="all">@import "/modules/user/user.css";</style>
+<style type="text/css" media="all">@import "/themes/foliage/style.css";</style>
+    <script type="text/javascript"> </script>
+  <style type="text/css">
+   #divpng{
+    height: 120px;
+    padding-left: 0px;
+    cursor: pointer;
+        }
+   #jpg{
+   float: left;
+   border: 0;
+      }
+  </style>
+  </head>
+
+<body>
+
+<table id="header" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="searchbar">
+          </td>
+  </tr>
+  <tr>
+    <td id="divpng" onClick="window.location.href='/'">
+    </td>
+  </tr>
+  <tr id="headerbottom">
+    <td id="menu">
+      <ul class="links" id="navlist"><li class="first menu-1-1-2"><a href="https://portal.skolaonline.cz" class="menu-1-1-2">Škola online</a></li>
+<li class="menu-1-2-2"><a href="http://www.sspu-opava.cz/moodle" class="menu-1-2-2">Moodle</a></li>
+<li class="menu-1-3-2"><a href="/rozvrhy" class="menu-1-3-2">Rozvrh</a></li>
+<li class="menu-1-4-2"><a href="https://webmail.sspu-opava.cz/zimbra" class="menu-1-4-2">E-mail</a></li>
+<li class="last menu-1-5-2"><a href="http://www.sspu-opava.cz/user" class="menu-1-5-2">Přihlášení pro učitele</a></li>
+</ul>      	  </td>
+  </tr>
+</table>
+
+<table id="content">
+  <tr>
+    <td id="sidebar-left">
+        <div class="block block-menu" id="block-menu-54">
+    <h2 class="title">Škola</h2>
+    <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/zakladni_udaje">Základní údaje</a></li>
+<li class="leaf"><a href="/historie">Historie a současnost</a></li>
+<li class="leaf"><a href="/kontakty">Kontakty</a></li>
+<li class="leaf"><a href="/rada">Školská rada</a></li>
+<li class="leaf"><a href="/umelecka-rada">Umělecká rada</a></li>
+<li class="leaf"><a href="/studenti">Žáci</a></li>
+<li class="leaf"><a href="/ucitele">Učitelé</a></li>
+<li class="leaf"><a href="/skolnirad">Školní řád</a></li>
+<li class="leaf"><a href="/prevence">Preventivní program</a></li>
+<li class="leaf"><a href="/vychovne_poradenstvi">Výchovné poradenství</a></li>
+<li class="leaf"><a href="/vyrocni_zprava">Výroční zpráva školy</a></li>
+
+</ul>
+</div>
+ </div>
+  <div class="block block-menu" id="block-menu-60">
+    <h2 class="title">Studium</h2>
+    <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/studium">Informace o studiu</a></li>
+<li class="leaf"><a href="/technicke_obory">Technické obory</a></li>
+<li class="leaf"><a href="/umelecke_obory">Umělecké obory</a></li>
+<li class="leaf"><a href="/nova_maturita">Maturita 2016/2017</a></li>
+
+</ul>
+</div>
+ </div>
+  <div class="block block-menu" id="block-menu-199">
+    <h2 class="title">Přijímací řízení</h2>
+    <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/nabidka_studia_to">Technické obory</a></li>
+<li class="leaf"><a href="/nabidka-studia-uo">Umělecké obory</a></li>
+
+</ul>
+</div>
+ </div>
+  <div class="block block-menu" id="block-menu-92">
+    <h2 class="title">Aktuální informace</h2>
+    <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/aktuality">Aktuality</a></li>
+<li class="leaf"><a href="/gallery">Galerie</a></li>
+<li class="leaf"><a href="/souteze">Soutěže</a></li>
+<li class="leaf"><a href="/exkurze">Exkurze</a></li>
+<li class="leaf"><a href="/prace_studentu">Práce studentů</a></li>
+<li class="leaf"><a href="/spoluprace">Spolupráce</a></li>
+
+</ul>
+</div>
+ </div>
+  <div class="block block-menu" id="block-menu-65">
+    <h2 class="title">Odkazy</h2>
+    <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/verejne-zakazky">Veřejné zakázky</a></li>
+<li class="leaf"><a href="https://webmail.sspu-opava.cz/zimbra/">Elektronická pošta</a></li>
+<li class="leaf"><a href="/inspeckni_zpravy">Inspekční zprávy</a></li>
+<li class="leaf"><a href="http://www.sspu-opava.cz/kvc/">Komunitní centrum</a></li>
+<li class="leaf"><a href="/sipvz">Projekty SIPVZ</a></li>
+<li class="leaf"><a href="/sablony">EU peníze středním školám – „Šablony“</a></li>
+<li class="leaf"><a href="/hello">Jazyková škola Hello</a></li>
+<li class="expanded"><a href="/projekty">Projekty</a>
+<ul class="menu">
+<li class="leaf"><a href="/program_nase_skola">Program &quot;Naše škola&quot;</a></li>
+<li class="leaf"><a href="/anglictinaprostrojare">Angličtina pro strojaře</a></li>
+<li class="leaf"><a href="/projekt_mechatronika">Mechatronika</a></li>
+<li class="leaf"><a href="/podpora_ov">Podpora odborného vzdělávání na středních školách MSK</a></li>
+<li class="leaf"><a href="/modernizace_vyuky_it">Modernizace výuky informačních technologií</a></li>
+
+</ul>
+</li>
+<li class="leaf"><a href="/pronajem-telocvicny">Pronájem tělocvičny</a></li>
+<li class="leaf"><a href="/vysoke_skoly">Vysoké školy</a></li>
+<li class="leaf"><a href="/ict_plan">ICT plán školy</a></li>
+<li class="leaf"><a href="/pro_studenty">Pro rodiče a žáky - ke stažení</a></li>
+<li class="leaf"><a href="http://www.sst.opava.cz/content/o-domove-mladeze" title="Ubytování pro studenty">Domov mládeže</a></li>
+<li class="leaf"><a href="/zamestnani">Nabídky zaměstnání</a></li>
+<li class="leaf"><a href="/user">Přihlášení pro učitele</a></li>
+
+</ul>
+</div>
+ </div>
+    </td>    <td valign="top">
+            <div id="main">
+        <div class="breadcrumb"><a href="/">Domů</a></div>        <h1 class="title">Přednáška o onkologických problémech - Rakovina není náhoda</h1>
+        <div class="tabs"></div>
+                          <div class="node">
+            <div class="content"><p>Dne 24. 10. 2013 se v&scaron;ichni studenti prvn&iacute;ch ročn&iacute;ků z&uacute;častnili předn&aacute;&scaron;ky pod n&aacute;zvem <em>Rakovina nen&iacute; n&aacute;hoda</em> poř&aacute;dan&eacute; V&scaron;eobecnou zdravotn&iacute; poji&scaron;ťovnou. S&nbsp;dan&yacute;m t&eacute;matem studenty sezn&aacute;mila MVDr. Kateřina Janovsk&aacute;, nast&iacute;nila problematiku a dala doporučen&iacute;, &nbsp;jak nemoci předch&aacute;zet.
+</p>
+<p><em>Mgr. Jitka Oboňov&aacute;</em></p>
+<div><strong>Informace o problematice na internetu:</strong>
+</div>
+<div><a target="_blank" href="http://www.mamo.cz">www.mamo.cz</a> - Program mamografick&eacute;ho screeningu ČR-rakovina prsu</div>
+<div><a target="_blank" href="http://www.cervix.cz">www.cervix.cz</a> - Program cervik&aacute;ln&iacute;ho screeningu ČR- rakovina děložn&iacute;ho hrdla</div>
+<div><a target="_blank" href="http://www.kolorektum.cz">www.kolorektum.cz</a> - Program kolorekt&aacute;ln&iacute;ho screeningu ČR- rakovina tlust&eacute;ho střeva</div>
+<div><a target="_blank" href="http://www.maskoule.cz">www.maskoule.cz</a> - Str&aacute;nka o rakovině varlat</div>
+<div><a target="_blank" href="http://www.melanomy.cz">www.melanomy.cz</a> - Str&aacute;nka o rakovině kůže</div>
+<div><a target="_blank" href="http://www.cus.cz">www.cus.cz</a> - Str&aacute;nka o rakovině prostaty</div>
+<div><a target="_blank" href="http://www.uzis.cz">www.uzis.cz</a> - Seznam akreditovan&yacute;ch onkologick&yacute;ch center&nbsp;</div>
+<div><a target="_blank" href="http://www.lpr.cz">www.lpr.cz</a> - Liga proti rakovině Praha</div>
+<div>
+</div>
+<p><em><img width="450" height="600" src="/UserFiles/Image/prednaska_rakovina.jpg" alt="Rakovina není náhoda" /><br />
+</em></p>
+</div>
+      </div>
+        		</div>
+    </td>
+      </tr>
+</table>
+
+<table id="footer">
+  <tr>
+    <td>
+     © 2012 SŠPU Opava
+    </td>
+  </tr>
+</table>
+
+
+</body>
+</html>

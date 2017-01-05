@@ -192,16 +192,22 @@ INSTALLED_APPS = [
     'skolaweb'
 ]
 
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
+
 LANGUAGES = (
     ## Customize this
-    ('cs', gettext('cs')),
-    ('en', gettext('en')),
+     ('cs', gettext('cs')),
+     ('en', gettext('en')),
 )
 
 CMS_LANGUAGES = {
     ## Customize this
     'default': {
         'public': True,
+        'code': 'cs',
         'hide_untranslated': False,
         'redirect_on_fallback': True,
     },
@@ -234,8 +240,8 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {
     'newsblog_article_content': {
-        'plugins': ['TextPlugin', 'PicturePlugin', 'Bootstrap3IconCMSPlugin', 'Bootstrap3LabelCMSPlugin', 'Bootstrap3ImageCMSPlugin', 'Bootstrap3ButtonCMSPlugin',
-                    'Bootstrap3FileCMSPlugin'],
+        #'plugins': ['TextPlugin', 'PicturePlugin', 'Bootstrap3IconCMSPlugin', 'Bootstrap3LabelCMSPlugin', 'Bootstrap3ImageCMSPlugin', 'Bootstrap3ButtonCMSPlugin',
+        #            'Bootstrap3FileCMSPlugin'],
         'text_only_plugins': ['LinkPlugin'],
         'extra_context': {"width": 640},
         'name': gettext("Content"),

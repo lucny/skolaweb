@@ -27,22 +27,22 @@
             {% render_model article "title" %}
         {% endif %}
     </h3>
-    {% if article.categories %}
-        <p class="category">
-            {% for category in article.categories.all %}
-                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}
-            {% endfor %}
-            | {{ article.publishing_date|date:"d. F Y" }}
-        </p>
-    {% endif %}
     {% if not detail_view %}
         <div class="lead">
             {% render_model article "lead_in" "" "" "truncatewords:'50'" %}
         </div>
     {% endif %}
 
-    {% include "aldryn_newsblog/includes/author.html" with author=article.author %}
-
+    {% if article.categories %}
+        <p class="category">
+            {% for category in article.categories.all %}
+                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}
+                {% if forloop.last %} | {% endif %}
+            {% endfor %}
+            {{ article.publishing_date|date }}
+            {% if article.author %}{% with author=article.author %} | autor: <a href="{% namespace_url "article-list-by-author" author.slug namespace=namespace default='' %}">{{ author.name }}</a>{% endwith %}{% endif %}
+        </p>
+    {% endif %}
     {% if article.tags and detail_view %}
         <p class="tags">
             {% for tag in article.tags.all %}

@@ -2,40 +2,79 @@
 {% load i18n staticfiles cms_tags menu_tags sekizai_tags %}
 {% block extend_root %}
 <div class="{% block obor %}{% placeholder 'obor' or %}skola{% endplaceholder %}{% endblock obor %}">
-{% block navigation %}
-        <!-- Navigation -->
-<header>
+    {% block navigation %}
+    <!-- Navigation -->
+    <header>
         <div class="container" id="navigation">
             <nav class="navbar" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     {% block logo %}
-                        {% placeholder "logo" or %}
-                        <a class="navbar-brand" href="/">
-                            <img src="{% static 'img/logo-skoly-rgb.png' %}" alt="{{ request.site.name }}" class="img img-responsive"/>
-                        </a>
-                        {% endplaceholder %}
+                    {% placeholder "logo" or %}
+                    <a class="navbar-brand" href="/">
+                        <img src="{% static 'img/logo-skoly-rgb.png' %}" alt="{{ request.site.name }}"
+                             class="img img-responsive"/>
+                    </a>
+                    {% endplaceholder %}
                     {% endblock logo %}
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     {% block navbar %}
-                        {% render_model_block request.current_page "changelist" %}
-                        {% with dropdown="true" %}
-                        <ul class="nav navbar-nav">
-                            {% show_menu 0 1 2 1 "includes/menu/navigation.html" %}
-                            <li class="divider" role="presentation"><span class="sr-only">{% trans "Separator" %}</span></li>
-                            {% show_menu_below_id "meta" 0 0 0 0 "includes/menu/navigation.html" %}
-                           {#  {% language_chooser "includes/menu/langnav.html" "native" %} #}
-                        </ul>
-                        {% endwith %}
-                        {% endrender_model_block %}
+                    {% render_model_block request.current_page "changelist" %}
+                    {% with dropdown="true" %}
+                    <ul class="nav navbar-nav">
+                        {% show_menu 0 1 2 1 "includes/menu/navigation.html" %}
+                        <li class="child ancestor children dropdown">
+                            <a href="/cs/studium/" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>
+                                        Odkazy
+                                        <span class="caret"></span>
+                                    </span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="child active first">
+                                    <a href="https://portal.skolaonline.cz/">
+                                            <span>
+                                                Škola online
+                                            </span>
+                                    </a>
+
+                                </li>
+
+                                <li class="child">
+                                    <a href="http://moodle.sspu-opava.cz:81">
+                                            <span>
+                                                Moodle
+                                            </span>
+                                    </a>
+
+                                </li>
+
+                                <li class="child">
+                                    <a href="https://webmail.sspu-opava.cz/zimbra">
+                                            <span>
+                                                Školní email
+                                            </span>
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="divider" role="presentation"><span class="sr-only">{% trans "Separator" %}</span>
+                        </li>
+                        {% show_menu_below_id "meta" 0 0 0 0 "includes/menu/navigation.html" %}
+                        {# {% language_chooser "includes/menu/langnav.html" "native" %} #}
+                    </ul>
+                    {% endwith %}
+                    {% endrender_model_block %}
                     {% endblock navbar %}
 
                 </div>
@@ -43,90 +82,97 @@
             </nav>
         </div>
         <!-- /.container -->
-{% endblock navigation %}
+        {% endblock navigation %}
 
-{% block header %}
-    {% block feature %}
+        {% block header %}
+        {% block feature %}
         {% placeholder "feature" or %}
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1>{{ request.current_page.get_page_title }}</h1>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="page-header">{{ request.current_page.get_page_title }}</h1>
                 </div>
             </div>
+        </div>
         {% endplaceholder %}
-    {% endblock feature %}
-{% endblock header %}
-</header>
-<!-- start: content -->
-{% block messages %}
-{% if messages %}
-<!-- start: messages -->
-<div class="container">
-    {% include "includes/messages.html" %}
-</div>
-<!-- end: messages -->
-{% endif %}
-{% endblock messages %}
-
-{% block extend_base %}
-{% block content %}
+        {% endblock feature %}
+        {% endblock header %}
+    </header>
+    <!-- start: content -->
+    {% block messages %}
+    {% if messages %}
+    <!-- start: messages -->
     <div class="container">
-            <div class="row">
-                <div id="main" class="col-sm-10 col-xs-10">
-    {% block menu %}{% endblock menu %}
- 	{% placeholder "content" or %}
-            <!-- Page Heading/Breadcrumbs -->
-    {% endplaceholder %}
-                </div>
-                <div id="sidebar" class="col-sm-2 col-xs-2">
-                    <div class="text-right"><button id="search-open" type="submit" class="btn btn-default"><i class="fa fa-search fa-1g" aria-hidden="true"></i>  Hledat</button></div>
+        {% include "includes/messages.html" %}
+    </div>
+    <!-- end: messages -->
+    {% endif %}
+    {% endblock messages %}
+
+    {% block extend_base %}
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div id="main" class="col-sm-10 col-xs-10">
+                {% block menu %}{% endblock menu %}
+                {% placeholder "content" or %}
+                <!-- Page Heading/Breadcrumbs -->
+                {% endplaceholder %}
+            </div>
+            <div id="sidebar" class="col-sm-2 col-xs-2">
+                <div id="finder">
                     {% block sidebar %}
                     <div class="aldryn aldryn-newsblog aldryn-newsblog-article-search js-aldryn-newsblog-article-search">
                         <form action="/cs/skola/zpravy/search/" class="form-inline" method="get">
                             <input name="csrfmiddlewaretoken" value="rud7RR3OsnBOJjgZa1Pgk69PPLB2PzJg" type="hidden">
                             <input name="max_articles" value="10" type="hidden">
                             <div class="input-group">
-                                <label for="field-1085-keyword" class="sr-only">Hledej</label>
-                                <input name="q" class="form-control" id="field-1085-keyword" placeholder="Hledej" type="text">
+                                <label for="search-field" class="sr-only">Hledej</label>
+                                <input name="q" class="form-control" id="search-field" placeholder="Hledej" type="text">
+                                <!-- <span class="input-group-btn">
+                                     <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                 </span>-->
                                 <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    <button id="search-close" type="submit" class="btn btn-default"><i class="fa fa-close fa-1g" aria-hidden="true"></i></button>
                                 </span>
                             </div>
                         </form>
                         <div class="search-results js-search-results"></div>
                     </div>
-                    <button id="search-close" type="submit" class="btn btn-default"><i class="fa fa-close fa-1g" aria-hidden="true"></i>  Zavřít </button>
-                     	{% placeholder "sidebar" or %}
-                        {% endplaceholder %}
-                    {% endblock sidebar %}
                 </div>
+                <div id="sidebar-content">
+                {% placeholder "sidebar" or %}
+                {% endplaceholder %}
+                </div>
+                {% endblock sidebar %}
             </div>
+        </div>
     </div>
-{% endblock content %}
-{% endblock extend_base %}
-<hr class="sr-only" />
-<!-- end: content -->
+    {% endblock content %}
+    {% endblock extend_base %}
+    <hr class="sr-only"/>
+    <!-- end: content -->
 </div>
 {% block footer %}
 <!-- start: footer -->
 <footer class="container">
     <div class="footer">
-            {% render_model_block request.current_page "changelist" %}
-            <ul class="list-inline">
-                <li class="pull-right"><a href="#page-top" data-spy="scroll">{% trans "Back to top" %} <span class="fa fa-right fa-arrow-up"></span></a></li>
-                {% show_menu_below_id "footer" 0 0 100 100 "includes/menu/navigation.html" %}
-            </ul>
-            {% endrender_model_block %}
-            {% static_placeholder "footer" %}
+        {% render_model_block request.current_page "changelist" %}
+        <ul class="list-inline">
+            <li class="pull-right"><a href="#page-top" data-spy="scroll">{% trans "Back to top" %} <span
+                    class="fa fa-right fa-arrow-up"></span></a></li>
+            {% show_menu_below_id "footer" 0 0 100 100 "includes/menu/navigation.html" %}
+        </ul>
+        {% endrender_model_block %}
+        {% static_placeholder "footer" %}
     </div>
     <div class="footer-theme">
-            {% static_placeholder "footer-theme" %}
+        {% static_placeholder "footer-theme" %}
     </div>
 </footer>
 <!-- end: footer -->
 {% endblock footer %}
 
-{% addtoblock "js" %}<script src="{% static 'js/addons/cl.explorer.js' %}"></script>{% endaddtoblock %}
+{% addtoblock "js" %}
+<script src="{% static 'js/addons/cl.explorer.js' %}"></script>{% endaddtoblock %}
 {% endblock extend_root %}

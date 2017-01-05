@@ -1,0 +1,33 @@
+{% load cms_tags i18n thumbnail aldryn_people_tags %}
+
+<article class="aldryn-people-article feature col-sm-12">
+    <div class="col-sm-6">
+    <p class="meta">
+        {% if not detail_view %}
+            <a href="{{ person.get_absolute_url }}">{{ person.name }}</a><br>
+        {% else %}
+            {% render_model person 'name' %}
+        {% endif %}
+        {% if person.description %}
+            {{ person.description|safe }}
+        {% endif %}
+    </div>
+    <div class="col-sm-6">
+        <p class="meta">
+        {% if person.phone %}
+            <span class="fa fa-fw fa-phone" aria-hidden="true"></span>
+            {{ person.phone|phoneformat }}<br>
+        {% endif %}
+        {% if person.email %}
+            <span class="fa fa-fw fa-envelope" aria-hidden="true"></span>
+            <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+        {% endif %}
+        {% if person.website %}
+            <br><strong>{% trans "Website:" %}</strong>
+            <span class="fa fa-fw fa-globe" aria-hidden="true"></span>
+            <a href="{{ person.website }}" target="_blank">{{ person.website }}</a>
+        {% endif %}
+        </p>
+    </div>
+<br>
+</article>

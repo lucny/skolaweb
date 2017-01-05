@@ -1,0 +1,753 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-05 18:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: skolaweb/settings.py:202 skolaweb/settings.py:219
+msgid "cs"
+msgstr ""
+
+#: skolaweb/settings.py:203 skolaweb/settings.py:226
+msgid "en"
+msgstr ""
+
+#: skolaweb/settings.py:247
+msgid "Content"
+msgstr ""
+
+#: skolaweb/templates/404.html:6 skolaweb/templates/404.html.py:10
+msgid "404 - Page not found"
+msgstr ""
+
+#: skolaweb/templates/404.html:11
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: skolaweb/templates/500.html:5 skolaweb/templates/500.html.py:11
+msgid "500 - Server error"
+msgstr ""
+
+#: skolaweb/templates/500.html:12
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_bootstrap3/plugins/button/change_form.html:9
+#: skolaweb/templates/admin/aldryn_bootstrap3/plugins/image/change_form.html:9
+#: skolaweb/templates/admin/aldryn_bootstrap3/plugins/label/change_form.html:9
+msgid "Preview"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_bootstrap3/plugins/button/change_form.html:14
+msgid "Start adding a text"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_bootstrap3/plugins/label/change_form.html:13
+msgid "Example Label"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_bootstrap3/widgets/icon.html:8
+msgid ""
+"No Iconsets configured! Please configure at least on Iconset before using "
+"this widget."
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_common/widgets/sortedm2m_widget.html:4
+msgid "Type into this box to filter down the list."
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_common/widgets/sortedm2m_widget.html:5
+msgid "Filter"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_common/widgets/sortedm2m_widget.html:20
+msgid "Choose items and order by drag & drop."
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_forms/display/submission_data.html:3
+msgid "Field"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_forms/display/submission_data.html:4
+msgid "Label"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_forms/display/submission_data.html:5
+msgid "Value"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_forms/export.html:5
+msgid "Export form submissions"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_forms/export.html:8
+msgid ""
+"\n"
+"                Please correct the error below."
+msgid_plural ""
+"Please correct the errors below.\n"
+"            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: skolaweb/templates/admin/aldryn_forms/export.html:32
+#: skolaweb/templates/admin/aldryn_forms/export_wizard.html:11
+#: skolaweb/templates/admin/djangocms_forms/formsubmission/export_form.html:12
+#: skolaweb/templates/admin/djangocms_forms/formsubmission/export_form.html:19
+msgid "Export"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_forms/export_wizard.html:13
+msgid "Continue"
+msgstr ""
+
+#: skolaweb/templates/admin/aldryn_forms/formsubmission/change_list.html:9
+msgid "Export Form Entries"
+msgstr ""
+
+#: skolaweb/templates/admin/djangocms_forms/formsubmission/change_list.html:10
+msgid "Export Form Submissions"
+msgstr ""
+
+#: skolaweb/templates/admin/djangocms_forms/formsubmission/export_form.html:9
+msgid "Home"
+msgstr ""
+
+#: skolaweb/templates/aldryn_bootstrap3/plugins/carousel/full/carousel.html:23
+#: skolaweb/templates/aldryn_bootstrap3/plugins/carousel/standard/carousel.html:23
+#: skolaweb/templates/aldryn_common/paginator.html:7
+#: skolaweb/templates/aldryn_events/includes/pagination.html:6
+#: skolaweb/templates/aldryn_newsblog/includes/pagination.html:13
+#: skolaweb/templates/aldryn_newsblog/informace/includes/pagination.html:13
+#: skolaweb/templates/aldryn_newsblog/zpravy/includes/pagination.html:13
+msgid "Previous"
+msgstr "Předchozí"
+
+#: skolaweb/templates/aldryn_bootstrap3/plugins/carousel/full/carousel.html:27
+#: skolaweb/templates/aldryn_bootstrap3/plugins/carousel/standard/carousel.html:27
+#: skolaweb/templates/aldryn_common/paginator.html:15
+#: skolaweb/templates/aldryn_events/includes/pagination.html:28
+#: skolaweb/templates/aldryn_newsblog/includes/pagination.html:46
+#: skolaweb/templates/aldryn_newsblog/informace/includes/pagination.html:46
+#: skolaweb/templates/aldryn_newsblog/zpravy/includes/pagination.html:46
+msgid "Next"
+msgstr "Další"
+
+#: skolaweb/templates/aldryn_bootstrap3/plugins/image.html:56
+msgid "Drop your file to change image:"
+msgstr ""
+
+#: skolaweb/templates/aldryn_bootstrap3/plugins/image.html:65
+msgid "Upload success!"
+msgstr ""
+
+#: skolaweb/templates/aldryn_bootstrap3/plugins/image.html:71
+msgid "Error! Files of this type are not accepted."
+msgstr ""
+
+#: skolaweb/templates/aldryn_common/paginator.html:4
+msgid "Pagination"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/emails/manager_confirmation.body.txt:1
+#, python-format
+msgid ""
+"There is a new registration for \"%(event_name)s\" (%(event_url)s).\n"
+"\n"
+"Details: %(registration_admin_url)s\n"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/emails/manager_confirmation.subject.txt:1
+#, python-format
+msgid "New registration for \"%(event_name)s\""
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/emails/registrant_confirmation.body.txt:1
+#, python-format
+msgid ""
+"Hi %(first_name)s\n"
+"\n"
+"You have registered for \"%(event_name)s\" (%(event_url)s).\n"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/emails/registrant_confirmation.subject.txt:1
+#, python-format
+msgid "Thank you for signing up to \"%(event_name)s\""
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/events_detail.html:22
+#: skolaweb/templates/aldryn_events/events_detail.html:29
+msgid "Previous Event"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/events_detail.html:36
+#: skolaweb/templates/aldryn_faq/question_list.html:10
+#: skolaweb/templates/aldryn_jobs/jobs_detail.html:18
+#: skolaweb/templates/aldryn_newsblog/article_detail.html:22
+#: skolaweb/templates/aldryn_newsblog/informace/article_detail.html:22
+#: skolaweb/templates/aldryn_newsblog/zpravy/article_detail.html:22
+msgid "Back to Overview"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/events_detail.html:43
+#: skolaweb/templates/aldryn_events/events_detail.html:50
+msgid "Next Event"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/events_detail.html:62
+msgid "Register for this event"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/events_detail.html:67
+msgid "More information"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/events_list.html:13
+#: skolaweb/templates/aldryn_events/events_list.html:27
+#: skolaweb/templates/aldryn_events/plugins/list/standard/list.html:18
+#: skolaweb/templates/aldryn_events/plugins/upcoming/standard/upcoming.html:18
+#: skolaweb/templates/aldryn_jobs/jobs_list.html:11
+#: skolaweb/templates/aldryn_jobs/jobs_list.html:14
+#: skolaweb/templates/aldryn_jobs/plugins/categories_list.html:16
+#: skolaweb/templates/aldryn_jobs/plugins/latest_entries.html:26
+#: skolaweb/templates/aldryn_newsblog/article_list.html:9
+#: skolaweb/templates/aldryn_newsblog/informace/article_list.html:9
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/archive.html:21
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/authors.html:10
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/latest_articles.html:7
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/related_articles.html:12
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/short_list_articles.html:6
+#: skolaweb/templates/aldryn_newsblog/plugins/archive.html:21
+#: skolaweb/templates/aldryn_newsblog/plugins/authors.html:10
+#: skolaweb/templates/aldryn_newsblog/plugins/latest_articles.html:7
+#: skolaweb/templates/aldryn_newsblog/plugins/related_articles.html:12
+#: skolaweb/templates/aldryn_newsblog/plugins/short_list_articles.html:6
+#: skolaweb/templates/aldryn_newsblog/zpravy/article_list.html:9
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/archive.html:21
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/authors.html:10
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/latest_articles.html:44
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/related_articles.html:12
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/short_list_articles.html:6
+msgid "No items available"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar.html:14
+msgid "There was a problem accessing the calendar, please try again."
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar.html:18
+msgid "Previous month"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar.html:19
+msgid "Today"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar.html:20
+msgid "Next month"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar_table.html:10
+msgid "Mo"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar_table.html:11
+msgid "Tu"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar_table.html:12
+msgid "We"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar_table.html:13
+msgid "Th"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar_table.html:14
+msgid "Fr"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar_table.html:15
+msgid "Sa"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/calendar_table.html:16
+msgid "Su"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/event.html:41
+msgid "Create Calendar Event"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/event.html:45
+msgid "Add to Calendar"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/event.html:48
+#: skolaweb/templates/aldryn_events/includes/event.html:51
+msgid "at"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/registration.html:8
+msgid ""
+"The registration deadline for this event has passed, registration is closed."
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/registration.html:13
+msgid "Thank you for your registration!"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/registration.html:16
+msgid "Reset your registration"
+msgstr ""
+
+#: skolaweb/templates/aldryn_events/includes/registration.html:39
+#: skolaweb/templates/aldryn_jobs/includes/application.html:18
+msgid "Submit"
+msgstr ""
+
+#: skolaweb/templates/aldryn_faq/includes/question_list.html:41
+#: skolaweb/templates/djangocms_blog/post_list.html:14
+msgid "Category"
+msgstr ""
+
+#: skolaweb/templates/aldryn_faq/includes/question_list.html:45
+#: skolaweb/templates/aldryn_faq/includes/ungrouped_question_list.html:26
+#: skolaweb/templates/aldryn_faq/plugins/category_list.html:12
+msgid "No entry found."
+msgstr ""
+
+#: skolaweb/templates/aldryn_faq/includes/question_list.html:51
+#: skolaweb/templates/aldryn_faq/question_detail.html:35
+msgid "Back to Category"
+msgstr ""
+
+#: skolaweb/templates/aldryn_forms/email_notifications/emails/notification.body.html:9
+#: skolaweb/templates/aldryn_forms/email_notifications/emails/notification.body.txt:8
+#: skolaweb/templates/aldryn_forms/emails/notification.body.html:3
+#: skolaweb/templates/aldryn_forms/emails/notification.body.txt:2
+#: skolaweb/templates/aldryn_forms/emails/user/notification.body.txt:5
+#, python-format
+msgid "Form name: %(form_name)s"
+msgstr ""
+
+#: skolaweb/templates/aldryn_forms/email_notifications/emails/notification.subject.txt:1
+#: skolaweb/templates/aldryn_forms/emails/notification.subject.txt:1
+#: skolaweb/templates/aldryn_forms/emails/user/notification.subject.txt:1
+#, python-format
+msgid "[Form submission] %(form_name)s"
+msgstr ""
+
+#: skolaweb/templates/aldryn_forms/field.html:7
+#: skolaweb/templates/aldryn_forms/fields/emailfield.html:9
+#: skolaweb/templates/aldryn_forms/fields/filefield.html:9
+#: skolaweb/templates/aldryn_forms/fields/imagefield.html:9
+#: skolaweb/templates/aldryn_forms/fields/multipleselectfield.html:9
+#: skolaweb/templates/aldryn_forms/fields/radioselectfield.html:8
+#: skolaweb/templates/aldryn_forms/fields/selectfield.html:9
+#: skolaweb/templates/aldryn_forms/fields/textareafield.html:9
+#: skolaweb/templates/aldryn_forms/fields/textfield.html:9
+msgid "Required field"
+msgstr ""
+
+#: skolaweb/templates/aldryn_forms/form.html:19
+#, python-format
+msgid ""
+"Thank you for submitting your information, you will be <a href="
+"\"%(form_success_url)s\">redirected shortly</a>."
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/confirmation.body.html:5
+#: skolaweb/templates/aldryn_jobs/emails/confirmation.body.txt:6
+msgctxt "aldryn-jobs"
+msgid "We will inform you about the progress."
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/confirmation.body.txt:4
+#: skolaweb/templates/aldryn_jobs/emails/confirmation.subject.txt:2
+#, python-format
+msgctxt "aldryn-jobs"
+msgid "You have successfully applied for %(job)s."
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/notification.body.txt:4
+#: skolaweb/templates/aldryn_jobs/emails/notification.subject.txt:2
+#, python-format
+msgctxt "aldryn-jobs"
+msgid "%(applicant)s has just applied for %(job)s."
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/rejection_letter.body.html:5
+#, python-format
+msgctxt "aldryn-jobs"
+msgid ""
+"\n"
+"        <p>Dear %(salutation)s %(first_name)s %(last_name)s</p>\n"
+"    "
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/rejection_letter.body.html:9
+msgctxt "aldryn-jobs"
+msgid ""
+"\n"
+"        <p>\n"
+"            Due to the large quantity of applications received,\n"
+"            it was a difficult task to short-list candidates and after "
+"careful\n"
+"            consideration we have decided not to take your application any "
+"further.\n"
+"            If you are still interested in employment with us, all our job "
+"openings\n"
+"            are listed on our website, which is updated regularly.\n"
+"            We are sorry that we cannot help you on this occasion,\n"
+"            but would like to take this opportunity to thank you for the\n"
+"            interest you have shown in us and to wish you every success\n"
+"            with your future career.\n"
+"        </p>\n"
+"\n"
+"        <p>Kind regards</p>\n"
+"        <p>Your HR team</p>\n"
+"    "
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/rejection_letter.body.txt:4
+#, python-format
+msgctxt "aldryn-jobs"
+msgid ""
+"\n"
+"Dear %(salutation)s %(first_name)s %(last_name)s"
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/rejection_letter.body.txt:7
+msgctxt "aldryn-jobs"
+msgid ""
+"Due to the large quantity of applications received, it was a difficult task "
+"to short-list candidates and after careful consideration we have decided not "
+"to take your application any further.\n"
+"If you are still interested in employment with us, all our job openings are "
+"listed on our website, which is updated regularly.\n"
+"We are sorry that we cannot help you on this occasion, but would like to "
+"take this opportunity to thank you for the interest you have shown in us and "
+"to wish you every success with your future career.\n"
+"\n"
+"Kind regards\n"
+"Your HR team"
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/emails/rejection_letter.subject.txt:2
+msgctxt "aldryn-jobs"
+msgid "Your application"
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/includes/application.html:13
+msgid "Apply for this job"
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/includes/job.html:12
+msgid "inactive"
+msgstr ""
+
+#: skolaweb/templates/aldryn_jobs/plugins/latest_entries.html:10
+#, python-format
+msgid ""
+"\n"
+"                Showing %(vacancies_count)s job opening\n"
+"            "
+msgid_plural ""
+"\n"
+"                Showing %(vacancies_count)s job openings\n"
+"            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: skolaweb/templates/aldryn_locations/plugins/locations.html:18
+msgid "Your address"
+msgstr ""
+
+#: skolaweb/templates/aldryn_locations/plugins/locations.html:19
+msgid "Street, City or Country"
+msgstr ""
+
+#: skolaweb/templates/aldryn_locations/plugins/locations.html:33
+msgid "Get directions"
+msgstr ""
+
+#: skolaweb/templates/aldryn_newsblog/article_detail.html:18
+#: skolaweb/templates/aldryn_newsblog/article_detail.html:20
+#: skolaweb/templates/aldryn_newsblog/informace/article_detail.html:18
+#: skolaweb/templates/aldryn_newsblog/informace/article_detail.html:20
+#: skolaweb/templates/aldryn_newsblog/zpravy/article_detail.html:18
+#: skolaweb/templates/aldryn_newsblog/zpravy/article_detail.html:20
+msgid "Previous Article"
+msgstr "Předchozí článek"
+
+#: skolaweb/templates/aldryn_newsblog/article_detail.html:24
+#: skolaweb/templates/aldryn_newsblog/article_detail.html:26
+#: skolaweb/templates/aldryn_newsblog/informace/article_detail.html:24
+#: skolaweb/templates/aldryn_newsblog/informace/article_detail.html:26
+#: skolaweb/templates/aldryn_newsblog/zpravy/article_detail.html:24
+#: skolaweb/templates/aldryn_newsblog/zpravy/article_detail.html:26
+msgid "Next Article"
+msgstr "Další článek"
+
+#: skolaweb/templates/aldryn_newsblog/includes/pagination.html:7
+#: skolaweb/templates/aldryn_newsblog/informace/includes/pagination.html:7
+#: skolaweb/templates/aldryn_newsblog/zpravy/includes/pagination.html:7
+msgid "First"
+msgstr "První"
+
+#: skolaweb/templates/aldryn_newsblog/includes/pagination.html:52
+#: skolaweb/templates/aldryn_newsblog/informace/includes/pagination.html:52
+#: skolaweb/templates/aldryn_newsblog/zpravy/includes/pagination.html:52
+msgid "Last"
+msgstr "Poslední"
+
+#: skolaweb/templates/aldryn_newsblog/includes/search_results.html:4
+#: skolaweb/templates/aldryn_newsblog/informace/includes/search_results.html:4
+#: skolaweb/templates/aldryn_newsblog/zpravy/includes/search_results.html:4
+#, python-format
+msgid "Most recent articles containing \"<strong>%(query)s</strong>\""
+msgstr ""
+
+#: skolaweb/templates/aldryn_newsblog/includes/search_results.html:19
+#: skolaweb/templates/aldryn_newsblog/informace/includes/search_results.html:19
+#: skolaweb/templates/aldryn_newsblog/zpravy/includes/search_results.html:19
+msgid "No articles found"
+msgstr "Nebyl nalezen žádný článek"
+
+#: skolaweb/templates/aldryn_newsblog/includes/search_results.html:21
+#: skolaweb/templates/aldryn_newsblog/informace/includes/search_results.html:21
+#: skolaweb/templates/aldryn_newsblog/zpravy/includes/search_results.html:21
+msgid "Enter a query above"
+msgstr ""
+
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/article_search.html:8
+#: skolaweb/templates/aldryn_newsblog/plugins/article_search.html:8
+msgid "Keyword search"
+msgstr ""
+
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/article_search.html:9
+#: skolaweb/templates/aldryn_newsblog/plugins/article_search.html:9
+msgid "Keyword"
+msgstr ""
+
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/article_search.html:11
+#: skolaweb/templates/aldryn_newsblog/plugins/article_search.html:11
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/article_search.html:11
+msgid "Go"
+msgstr "Jdi"
+
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/categories.html:6
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/tags.html:6
+#: skolaweb/templates/aldryn_newsblog/plugins/categories.html:6
+#: skolaweb/templates/aldryn_newsblog/plugins/tags.html:6
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/categories.html:6
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/tags.html:6
+msgid "All"
+msgstr "Vše"
+
+#: skolaweb/templates/aldryn_newsblog/informace/plugins/related_articles.html:9
+#: skolaweb/templates/aldryn_newsblog/plugins/related_articles.html:9
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/related_articles.html:9
+#: skolaweb/templates/djangocms_blog/includes/blog_meta.html:6
+msgid "by"
+msgstr ""
+
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/article_search.html:8
+#: skolaweb/templates/aldryn_newsblog/zpravy/plugins/article_search.html:9
+msgid "Hledej"
+msgstr ""
+
+#: skolaweb/templates/aldryn_people/group_list.html:13
+#: skolaweb/templates/aldryn_people/plugins/feature/people_list.html:26
+#: skolaweb/templates/aldryn_people/plugins/standard/people_list.html:26
+msgid "Ungrouped"
+msgstr ""
+
+#: skolaweb/templates/aldryn_people/includes/feature-person.html:26
+#: skolaweb/templates/aldryn_people/includes/group.html:26
+#: skolaweb/templates/aldryn_people/includes/person.html:44
+msgid "Website:"
+msgstr "WWW"
+
+#: skolaweb/templates/aldryn_people/includes/group.html:13
+#: skolaweb/templates/aldryn_people/includes/person.html:27
+msgid "Phone:"
+msgstr "Telefon"
+
+#: skolaweb/templates/aldryn_people/includes/group.html:17
+#: skolaweb/templates/aldryn_people/includes/person.html:35
+msgid "Fax:"
+msgstr ""
+
+#: skolaweb/templates/aldryn_people/includes/group.html:21
+#: skolaweb/templates/aldryn_people/includes/person.html:39
+msgid "Email:"
+msgstr ""
+
+#: skolaweb/templates/aldryn_people/includes/group.html:34
+msgid "Address:"
+msgstr "Adresa"
+
+#: skolaweb/templates/aldryn_people/includes/person.html:31
+msgid "Mobile:"
+msgstr "Mobil"
+
+#: skolaweb/templates/aldryn_people/includes/person.html:57
+msgid "Download vCard"
+msgstr ""
+
+#: skolaweb/templates/base.html:69
+msgid "Separator"
+msgstr ""
+
+#: skolaweb/templates/base.html:154
+msgid "Back to top"
+msgstr "Zpět nahoru"
+
+#: skolaweb/templates/base_root.html:73
+msgid "Please enable JavaScript"
+msgstr ""
+
+#: skolaweb/templates/base_root.html:74
+msgid "Your browser is out-of-date!"
+msgstr ""
+
+#: skolaweb/templates/base_root.html:75
+msgid "Update your browser to view this website correctly."
+msgstr ""
+
+#: skolaweb/templates/base_root.html:78
+msgid "Update my browser now"
+msgstr ""
+
+#: skolaweb/templates/djangocms_audio/default/audio_player.html:8
+msgid "No audio file available."
+msgstr ""
+
+#: skolaweb/templates/djangocms_audio/default/folder.html:11
+msgid "No matching audio files were found in the specified folder."
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/includes/blog_item.html:24
+msgid "read more"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/plugins/archive.html:3
+#: skolaweb/templates/djangocms_blog/post_list.html:12
+msgid "Archive"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/plugins/archive.html:17
+#: skolaweb/templates/djangocms_blog/plugins/authors.html:10
+#: skolaweb/templates/djangocms_blog/plugins/categories.html:10
+#: skolaweb/templates/djangocms_blog/plugins/tags.html:10
+#, python-format
+msgid "1 article"
+msgid_plural "%(articles)s articles"
+msgstr[0] ""
+msgstr[1] ""
+
+#: skolaweb/templates/djangocms_blog/plugins/archive.html:18
+#: skolaweb/templates/djangocms_blog/plugins/authors.html:11
+#: skolaweb/templates/djangocms_blog/plugins/categories.html:11
+#: skolaweb/templates/djangocms_blog/plugins/tags.html:11
+msgid "0 articles"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/plugins/archive.html:26
+#: skolaweb/templates/djangocms_blog/plugins/authors.html:15
+#: skolaweb/templates/djangocms_blog/plugins/latest_entries.html:7
+#: skolaweb/templates/djangocms_blog/plugins/tags.html:15
+#: skolaweb/templates/djangocms_blog/post_list.html:21
+msgid "No article found."
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/plugins/authors.html:3
+msgid "Authors"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/plugins/categories.html:3
+msgid "Categories"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/plugins/categories.html:15
+msgid "No categories found."
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/plugins/tags.html:3
+msgid "Tags"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/post_list.html:11
+msgid "Articles by"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/post_list.html:13
+msgid "Tag"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/post_list.html:24
+msgid "Back"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/post_list.html:29
+#: skolaweb/templates/includes/menu/pagenav.html:4
+msgid "previous"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/post_list.html:32
+msgid "Page"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/post_list.html:32
+msgid "of"
+msgstr ""
+
+#: skolaweb/templates/djangocms_blog/post_list.html:35
+#: skolaweb/templates/includes/menu/pagenav.html:26
+msgid "next"
+msgstr ""
+
+#: skolaweb/templates/djangocms_forms/email_template/email.html:10
+#: skolaweb/templates/djangocms_forms/email_template/email.txt:4
+msgid "Date:"
+msgstr ""
+
+#: skolaweb/templates/djangocms_forms/email_template/email.html:17
+#: skolaweb/templates/djangocms_forms/email_template/email.txt:11
+msgid "Sent via"
+msgstr ""
+
+#: skolaweb/templates/djangocms_forms/email_template/email.txt:3
+msgid "Form:"
+msgstr ""
+
+#: skolaweb/templates/djangocms_forms/form_template/default.html:44
+msgid "Submission successful"
+msgstr ""
+
+#: skolaweb/templates/djangocms_forms/form_template/default.html:45
+msgid "Thank You! Your form has been successfully submitted!"
+msgstr ""
+
+#: skolaweb/templates/sidebar_left.html:13
+#: skolaweb/templates/sidebar_right.html:13
+msgid "Sidebar"
+msgstr ""

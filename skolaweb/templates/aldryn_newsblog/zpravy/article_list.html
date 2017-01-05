@@ -5,6 +5,7 @@
     <div class="aldryn-newsblog-list">
         {% for article in article_list %}
             {% include "aldryn_newsblog/zpravy/includes/article.html" %}
+            {% if not forloop.last %}<hr>{% endif %}
         {% empty %}
             <p class="well">{% trans "No items available" %}</p>
         {% endfor %}

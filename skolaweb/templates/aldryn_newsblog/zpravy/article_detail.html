@@ -12,6 +12,24 @@
 {% endblock %}
 
 {% block newsblog_footer %}
+                <div id="finder">
+                    <div class="aldryn aldryn-newsblog aldryn-newsblog-article-search js-aldryn-newsblog-article-search">
+                        <form action="/cs/skola/zpravy/search/" class="form-inline" method="get">
+                            <input name="csrfmiddlewaretoken" value="rud7RR3OsnBOJjgZa1Pgk69PPLB2PzJg" type="hidden">
+                            <input name="max_articles" value="10" type="hidden">
+                            <div class="input-group">
+                                <label for="search-field" class="sr-only">Hledej</label>
+                                <input name="q" class="form-control" id="search-field" placeholder="Hledej" type="text">
+                                <span class="input-group-btn">
+                                    <button id="search-close" type="submit" class="btn btn-default"><i class="fa fa-close fa-1g" aria-hidden="true"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                        <div class="search-results js-search-results"></div>
+                    </div>
+                </div>
+
+    <!--
     <div class="aldryn-newsblog-pager">
         <ul class="pager">
             {% if prev_article %}
@@ -27,5 +45,6 @@
             {% endif %}
         </ul>
     </div>
+    -->
     {% static_placeholder "newsblog_comments" %}
 {% endblock %}

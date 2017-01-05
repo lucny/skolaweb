@@ -34,36 +34,30 @@ var Cl = window.Cl || {};
             });
         }
 
-        $("#search-close").hide();
-        $(".aldryn-newsblog-article-search").hide();
+        $("#search-close").parent().hide();
 
-        $("#search-open").click(function () {
-           $(".aldryn-newsblog-article-search").show();
+        $("#search-field").keyup(function(){
+            $(this).parents(".form-inline").submit();
+        });
+
+        $("#search-field").focus(function(){
+           //$(this).parents(".form-inline").hide();
            $("#main").attr("class","col-xs-8");
            $("#sidebar").attr("class","col-xs-4");
            $(".menu-obory").hide();
-           $(this).hide();
-            $("#search-close").show();
+           $("#search-close").parent().show();
+           $("#sidebar-content").hide();
         });
 
-/*        $("#main").click(function () {
-           $("#main").attr("class","col-sm-10 col-xs-11");
-           $("#sidebar").attr("class","col-sm-2 col-xs-1");
-           $(".menu-obory").show();
-        });*/
-
-        $(".aldryn-newsblog-article-search .form-inline").submit(function(e){
-            $("#search-close").show();
-        });
-
-        $("#search-close").click(function () {
+        $("#search-close").click(function() {
            $("#main").attr("class","col-sm-10 col-xs-10");
            $("#sidebar").attr("class","col-sm-2 col-xs-2");
            $(".menu-obory").show();
            $(".search-results").html("");
-           $(this).hide();
+           $("#search-field").val("");
+           $(this).parent().hide();
            $("#search-open").show();
-           $(".aldryn-newsblog-article-search").hide();
+           $("#sidebar-content").show();
         });
 
     })
