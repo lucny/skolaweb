@@ -13,6 +13,33 @@
 var Cl = window.Cl || {};
 /* global outdatedBrowser */
 
+
+function getStyleObject(stobj){
+        var dom = stobj.get(0);
+        var style;
+        var returns = {};
+        if(window.getComputedStyle){
+            var camelize = function(a,b){
+                return b.toUpperCase();
+            };
+            style = window.getComputedStyle(dom, null);
+            for(var i = 0, l = style.length; i < l; i++){
+                var prop = style[i];
+                var camel = prop.replace(/\-([a-z])/g, camelize);
+                var val = style.getPropertyValue(prop);
+                returns[camel] = val;
+            };
+            return returns;
+        };
+        if(style = dom.currentStyle){
+            for(var prop in style){
+                returns[prop] = style[prop];
+            };
+            return returns;
+        };
+        return stobj.css();
+}
+
 // #############################################################################
 // BASE
 // istanbul ignore next
@@ -34,31 +61,15 @@ var Cl = window.Cl || {};
             });
         }
 
-        $("#search-close").parent().hide();
 
-        $("#search-field").keyup(function(){
-            $(this).parents(".form-inline").submit();
+        $("#search-result").bind("DOMSubtreeModified",function(){
+            $(this).hide();
+            $("#search-dialog-body").html($("#search-result").html());
         });
 
-        $("#search-field").focus(function(){
-           //$(this).parents(".form-inline").hide();
-           $("#main").attr("class","col-xs-8");
-           $("#sidebar").attr("class","col-xs-4");
-           $(".menu-obory").hide();
-           $("#search-close").parent().show();
-           $("#sidebar-content").hide();
-        });
-
-        $("#search-close").click(function() {
-           $("#main").attr("class","col-sm-10 col-xs-10");
-           $("#sidebar").attr("class","col-sm-2 col-xs-2");
-           $(".menu-obory").show();
-           $(".search-results").html("");
-           $("#search-field").val("");
-           $(this).parent().hide();
-           $("#search-open").show();
-           $("#sidebar-content").show();
-        });
+        $("#obory-btn").click(function(){
+            $("#obory-menu").toggle(500);
+ 		});
 
     })
 })(jQuery);

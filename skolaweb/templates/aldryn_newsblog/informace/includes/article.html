@@ -1,6 +1,6 @@
 {% load i18n apphooks_config_tags cms_tags sekizai_tags staticfiles thumbnail %}
 
-<article class="aldryn-newsblog-article{% if article.is_featured %} aldryn-newsblog-featured{% endif %}{% if not article.published %} unpublished{% endif %}{% if article.future %} future{% endif %}">
+<article class="aldryn-newsblog-article{% if article.is_featured %} aldryn-newsblog-featured{% endif %}{% for tag in article.tags.all %}{% if tag.name == "top" %} top{% endif %}{% endfor %}{% if article.future %} future{% endif %}{% if not article.published %} unpublished{% endif %}{% if article.future %} future{% endif %}">
     {% if article.featured_image_id %}
         <p class="visual">
             {% if not detail_view %}
@@ -59,6 +59,7 @@
         </div>
     {% endif %}
 </article>
+
 {% addtoblock "css" %}
 <style>
 .aldryn-newsblog-article-search .results-list .unpublished,

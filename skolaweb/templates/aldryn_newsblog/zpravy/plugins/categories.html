@@ -1,15 +1,20 @@
 {% load i18n apphooks_config_tags %}
 
  <div class="aldryn aldryn-newsblog aldryn-newsblog-categories">
-    <ul class="list-unstyled">
-        <li{% if not newsblog_category %} class="active"{% endif %}>
-            <a href="{% namespace_url "article-list" namespace=instance.app_config.namespace default='' %}">{% trans "All" %}</a>
-        </li>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="{% namespace_url "article-list" namespace=instance.app_config.namespace default='' %}" class="panel-title">{% trans "All" %}</a>
+        </div>
+        <div class="list-group">
         {% for category in categories %}
-            <li{% if newsblog_category.id == category.id %} class="active"{% endif %}>
-                <span class="badge">{{ category.article_count }}</span>
-                <a href="{% namespace_url "article-list-by-category" category.slug namespace=instance.app_config.namespace default='' %}">{{ category.name }}</a>
-            </li>
+                {# NOTE: Wrapping the following anchor markup will break tests #}
+                {% for month in year.list %}
+                    <a href="{% namespace_url 'article-list-by-month' year=year.grouper month=month.date|date:"n" namespace=instance.app_config.namespace default='' %}" class="list-group-item{% if year.grouper == current_year and month.date.month == current_month %} active{% endif %}">{{ month.date|date:"F" }}<span class="badge">{{ month.num_articles }}</span></a>
+                {% endfor %}
+
+                <a href="{% namespace_url "article-list-by-category" category.slug namespace=instance.app_config.namespace default='' %}" class="list-group-item{% if newsblog_category.id == category.id %} active{% endif %}">{{ category.name }} <span class="badge">{{ category.article_count }}</span></a>
+
         {% endfor %}
-    </ul>
+        </div>
+    </div>
 </div>

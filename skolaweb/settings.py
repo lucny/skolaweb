@@ -234,6 +234,7 @@ CMS_TEMPLATES = (
     ('fullwidth.html', 'Fullwidth'),
     ('home.html', 'Home'),
     ('obory.html', 'Obory'),
+    ('info.html', 'Info'),
 )
 
 CMS_PERMISSION = True

@@ -2,6 +2,7 @@
 
 <div class="aldryn aldryn-newsblog">
     {% for article in articles_list %}
-        {% include "aldryn_newsblog/informace/includes/article.html" with namespace=instance.app_config.namespace image="large" %}
+        {% include "aldryn_newsblog/zpravy/includes/article-featured.html" with namespace=instance.app_config.namespace image="large" %}
+        <hr>
     {% endfor %}
 </div>

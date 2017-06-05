@@ -35,7 +35,7 @@ var GMaps = function(options) {
 
   var that = this,
     container_id = options.el || options.div,
-    mapCenter = new google.maps.LatLng(37.4419, -122.1419),
+    mapCenter = new google.maps.LatLng(49.937437, 17.907423),
     el = typeof container_id == 'string' ? getElementById(container_id) : container_id,
     locations = options.locations,
     markers = [];

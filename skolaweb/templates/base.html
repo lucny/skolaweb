@@ -1,178 +1,206 @@
 {% extends "base_root.html" %}
 {% load i18n staticfiles cms_tags menu_tags sekizai_tags %}
 {% block extend_root %}
-<div class="{% block obor %}{% placeholder 'obor' or %}skola{% endplaceholder %}{% endblock obor %}">
-    {% block navigation %}
-    <!-- Navigation -->
-    <header>
-        <div class="container" id="navigation">
-            <nav class="navbar" role="navigation">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    {% block logo %}
-                    {% placeholder "logo" or %}
-                    <a class="navbar-brand" href="/">
-                        <img src="{% static 'img/logo-skoly-rgb.png' %}" alt="{{ request.site.name }}"
-                             class="img img-responsive"/>
-                    </a>
-                    {% endplaceholder %}
-                    {% endblock logo %}
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                    {% block navbar %}
-                    {% render_model_block request.current_page "changelist" %}
-                    {% with dropdown="true" %}
-                    <ul class="nav navbar-nav">
-                        {% show_menu 0 1 2 1 "includes/menu/navigation.html" %}
-                        <li class="child ancestor children dropdown">
-                            <a href="/cs/studium/" class="dropdown-toggle" data-toggle="dropdown">
+    <div class="{% block obor %}{% placeholder 'obor' or %}skola{% endplaceholder %}{% endblock obor %}">
+        {% block navigation %}
+            <!-- Navigation -->
+            <div class="container" id="navigation">
+                <nav class="navbar" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle navbar-inverse" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        {% block logo %}
+                            {% placeholder "logo" or %}
+                                <a class="navbar-brand" href="/">
+                                    <img src="{% static 'img/skola-logo.png' %}" alt="{{ request.site.name }}"
+                                         class="img img-responsive" id="logo">
+                                </a>
+                            {% endplaceholder %}
+                        {% endblock logo %}
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                        {% block navbar %}
+                            {% render_model_block request.current_page "changelist" %}
+                                {% with dropdown="true" %}
+                                    <ul class="nav navbar-nav">
+                                        {% show_menu 0 1 2 1 "includes/menu/navigation.html" %}
+                                        <li class="child ancestor children dropdown">
+                                            <a href="/cs/studium/" class="dropdown-toggle" data-toggle="dropdown">
                                     <span>
                                         Odkazy
                                         <span class="caret"></span>
                                     </span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li class="child active first">
-                                    <a href="https://portal.skolaonline.cz/">
-                                            <span>
-                                                Škola online
-                                            </span>
-                                    </a>
+                                            </a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li class="child active first">
+                                                    <a href="https://portal.skolaonline.cz/"><span>Škola online</span></a>
+                                                </li>
+                                                <li class="child">
+                                                    <a href="http://moodle.sspu-opava.cz:81"><span>Moodle</span></a>
+                                                </li>
+                                                <li class="child">
+                                                    <a href="https://webmail.sspu-opava.cz/zimbra"><span>Školní email</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        </li>
+                                        <li class="aldryn aldryn-newsblog aldryn-newsblog-article-search js-aldryn-newsblog-article-search"
+                                            id="finder">
 
-                                </li>
+                                            <form action="/cs/skola/zpravy/search/" class="navbar-form navbar-right" role="search" method="get">
+                                                <input name="csrfmiddlewaretoken"
+                                                       value="rud7RR3OsnBOJjgZa1Pgk69PPLB2PzJg" type="hidden">
+                                                <input name="max_articles" value="10" type="hidden">
+                                                <div class="input-group">
+                                                    <input name="q" type="text" class="form-control"
+                                                           placeholder="Hledej" id="search-field">
+                                                    <span class="input-group-btn">
+							        <button class="btn btn-default" type="submit" id="search-btn" data-toggle="modal"
+                                            data-target="#myModal"><b class="glyphicon glyphicon-search"></b></button>
+							      </span>
+                                                </div>
+                                            </form>
+                                            <div class="search-results js-search-results" id="search-result"></div>
+                                        </li>
+                                    </ul>
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-color-neutral">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title">Výsledky hledání</h4>
+                                                </div>
+                                                <div class="modal-body" id="search-dialog-body">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                        Zavřít
+                                                    </button>
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div>
+                                {% endwith %}
+                            {% endrender_model_block %}
+                        {% endblock navbar %}
 
-                                <li class="child">
-                                    <a href="http://moodle.sspu-opava.cz:81">
-                                            <span>
-                                                Moodle
-                                            </span>
-                                    </a>
-
-                                </li>
-
-                                <li class="child">
-                                    <a href="https://webmail.sspu-opava.cz/zimbra">
-                                            <span>
-                                                Školní email
-                                            </span>
-                                    </a>
-
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="divider" role="presentation"><span class="sr-only">{% trans "Separator" %}</span>
-                        </li>
-                        {% show_menu_below_id "meta" 0 0 0 0 "includes/menu/navigation.html" %}
-                        {# {% language_chooser "includes/menu/langnav.html" "native" %} #}
-                    </ul>
-                    {% endwith %}
-                    {% endrender_model_block %}
-                    {% endblock navbar %}
-
-                </div>
-                <!-- /.navbar-collapse -->
-            </nav>
-        </div>
-        <!-- /.container -->
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- /.container -->
         {% endblock navigation %}
-
-        {% block header %}
-        {% block feature %}
-        {% placeholder "feature" or %}
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="page-header">{{ request.current_page.get_page_title }}</h1>
-                </div>
-            </div>
-        </div>
-        {% endplaceholder %}
-        {% endblock feature %}
-        {% endblock header %}
-    </header>
-    <!-- start: content -->
-    {% block messages %}
-    {% if messages %}
-    <!-- start: messages -->
-    <div class="container">
-        {% include "includes/messages.html" %}
-    </div>
-    <!-- end: messages -->
-    {% endif %}
-    {% endblock messages %}
-
-    {% block extend_base %}
-    {% block content %}
-    <div class="container">
-        <div class="row">
-            <div id="main" class="col-sm-10 col-xs-10">
-                {% block menu %}{% endblock menu %}
-                {% placeholder "content" or %}
-                <!-- Page Heading/Breadcrumbs -->
-                {% endplaceholder %}
-            </div>
-            <div id="sidebar" class="col-sm-2 col-xs-2">
-                <div id="finder">
-                    {% block sidebar %}
-                    <div class="aldryn aldryn-newsblog aldryn-newsblog-article-search js-aldryn-newsblog-article-search">
-                        <form action="/cs/skola/zpravy/search/" class="form-inline" method="get">
-                            <input name="csrfmiddlewaretoken" value="rud7RR3OsnBOJjgZa1Pgk69PPLB2PzJg" type="hidden">
-                            <input name="max_articles" value="10" type="hidden">
-                            <div class="input-group">
-                                <label for="search-field" class="sr-only">Hledej</label>
-                                <input name="q" class="form-control" id="search-field" placeholder="Hledej" type="text">
-                                <!-- <span class="input-group-btn">
-                                     <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                 </span>-->
-                                <span class="input-group-btn">
-                                    <button id="search-close" type="submit" class="btn btn-default"><i class="fa fa-close fa-1g" aria-hidden="true"></i></button>
-                                </span>
+        <header>
+            {% block header %}
+                {% block feature %}
+                    {% placeholder "feature" or %}
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h1 class="page-header">{{ request.current_page.get_page_title }}</h1>
+                                </div>
                             </div>
-                        </form>
-                        <div class="search-results js-search-results"></div>
+                        </div>
+                    {% endplaceholder %}
+                {% endblock feature %}
+                <div class="container">
+                    {% block obory %}{% endblock obory %}
+                    {% block logo-bar %}{% endblock logo-bar %}
+                    {% block submenu %}{% endblock submenu %}
+                </div>
+            {% endblock header %}
+        </header>
+        <!-- start: content -->
+        {% block messages %}
+            {% if messages %}
+                <!-- start: messages -->
+                <div class="container">
+                    {% include "includes/messages.html" %}
+                </div>
+                <!-- end: messages -->
+            {% endif %}
+        {% endblock messages %}
+
+        {% block extend_base %}
+            {% block content %}
+                <main class="container">
+                    {% placeholder "content" or %}
+                        <!-- Page Heading/Breadcrumbs -->
+                    {% endplaceholder %}
+                </main>
+            {% endblock content %}
+        {% endblock extend_base %}
+        <hr class="sr-only"/>
+        <!-- end: content -->
+    </div>
+    {% block footer %}
+        <!-- start: footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-0">
+                        <p><img src="{% static 'img/kraj-logo-cb.png' %}" alt="" class="img img-responsive"></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h4 class="text-center">Střední škola průmyslová a umělecká, Opava</h4>
+                        <ul style="list-style-type: none">
+                            <li>Praskova 399/8, Opava, 746 01</li>
+                            <li>Právní forma: Příspěvková organizace</li>
+                            <li>IČ: 47813121, IZO: 600017338</li>
+                            <li>Tel.: 553 621 580, 553 622 604</li>
+                            <li>E-mail: sspu@sspu-opava.cz</li>
+                            <li>ID datové schránky: xc5gfwu, typ datové schránky: právnická osoba</li>
+                        </ul>
+                        <hr style="border: 1px dotted #666">
+                        <h5 class="text-center">Školní dílny</h4>
+                            <ul style="list-style-type: none">
+                                <li>Janská 1849/30, Opava, 746 01</li>
+                                <li>tel.: +420 734 353 923</li>
+                            </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <img src="{% static 'img/skola-shora.png' %}" alt="" class="img img-responsive"><br>
+                        <img src="{% static 'img/skola-logo-trans.png' %}" alt="" class="img img-responsive"
+                             style="width:50%">
+                        <!--
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d736.9099870322948!2d17.90774688915752!3d49.937445556276074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1494082325499" height="300" frameborder="0" style="width: 100%; border:0" allowfullscreen></iframe>
+                        -->
                     </div>
                 </div>
-                <div id="sidebar-content">
-                {% placeholder "sidebar" or %}
-                {% endplaceholder %}
-                </div>
-                {% endblock sidebar %}
+                <hr>
+                <p>&copy; SŠPU Opava 2017</p>
             </div>
+        </footer>
+        <div class="container">
+            <p style="text-align: center;">
+                <img src="{% static 'img/firmy-nase-skola-cb.png' %}" alt="Sponzoři školy" title="Sponzoři školy"
+                     class="img-responsive">
+            </p>
         </div>
-    </div>
-    {% endblock content %}
-    {% endblock extend_base %}
-    <hr class="sr-only"/>
-    <!-- end: content -->
-</div>
-{% block footer %}
-<!-- start: footer -->
-<footer class="container">
-    <div class="footer">
-        {% render_model_block request.current_page "changelist" %}
-        <ul class="list-inline">
-            <li class="pull-right"><a href="#page-top" data-spy="scroll">{% trans "Back to top" %} <span
-                    class="fa fa-right fa-arrow-up"></span></a></li>
-            {% show_menu_below_id "footer" 0 0 100 100 "includes/menu/navigation.html" %}
-        </ul>
-        {% endrender_model_block %}
-        {% static_placeholder "footer" %}
-    </div>
-    <div class="footer-theme">
-        {% static_placeholder "footer-theme" %}
-    </div>
-</footer>
-<!-- end: footer -->
-{% endblock footer %}
+        <!-- end: footer -->
+    {% endblock footer %}
 
-{% addtoblock "js" %}
-<script src="{% static 'js/addons/cl.explorer.js' %}"></script>{% endaddtoblock %}
+    {% addtoblock "js" %}
+        <script src="{% static 'js/addons/cl.explorer.js' %}"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7aAMiiG2r9mFe8JqIcDveqKpd8vs2Irw&callback=myMap"
+        type="text/javascript"></script>
+        <script>
+        function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(49.9375,17.907),
+            zoom:19,
+        };
+        var map=new google.maps.Map(document.getElementById("mapa"),mapProp);
+        }
+        </script>
+    {% endaddtoblock %}
 {% endblock extend_root %}

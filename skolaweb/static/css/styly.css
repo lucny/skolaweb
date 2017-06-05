@@ -1,0 +1,430 @@
+* {font-family: 'Hind Guntur', sans-serif;}
+
+h2 {
+	background-color: #eee;
+	color: #666;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	padding: 1em;
+}
+
+h3 {
+	font-size: 1.1em;	
+}
+
+figure {
+	margin-top: 1em;
+}
+
+.half {
+	width: 50%;
+	float: left;
+}
+
+article {
+	padding: 0 1em;
+}
+
+article h3 a {
+	color: #222;
+}
+
+article .lead {
+	font-size: 0.9em;
+}
+
+article h3 {
+	line-height: 1.5;
+}
+
+article.top h3 a {
+	color: #C42079;
+}
+
+article .obsah h3 {
+	margin-top: 0;
+}
+
+.sedy {
+	background-color: #f6f6f6;
+	padding: 10px;
+}
+
+.zeleny {
+	background-color: #59BDDC;
+	color: white;
+	padding: 10px;
+}
+
+.navbar {
+	min-height: 100px;
+	margin-bottom: 0;
+	background-color: white;
+}
+
+.navbar-header {
+	height: 100px;
+}
+
+.navbar-brand {
+	height: 100px;
+	padding: 20px 15px 10px 15px;
+}
+
+.navbar-collapse {
+	margin-top: 50px;
+}
+
+.navbar-collapse.in {
+    border-color: #666;
+}
+
+.navbar-form {
+	background-color: white;
+}
+
+.navbar a {
+	text-transform: uppercase;
+	color: #666;
+}
+
+.nav > li > a {
+	padding: 20px 10px 10px 10px;
+}
+
+ul.nav.navbar-nav.navbar-right {
+	vertical-align: middle;
+}
+
+
+.results-list li a {
+	text-transform: none;
+}
+
+.results-list h4 {
+	color: #1A4053;
+}
+
+img#logo {
+    max-width: 320px;
+}
+
+#logo-bar {
+	padding: 1em 0; 
+}
+
+#search {
+	width: 120px;
+	height: 30px;
+	background-color: #eee;
+	color: #666; 
+}
+
+#search-btn {
+	height: 30px;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	color: #666;
+}
+
+#obory-btn {
+	display: none;
+}
+
+#obory-menu {
+	display: block;
+}
+
+#obory, #obor {
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+#info-obor > div > div > div {
+	padding: 2em;
+}
+
+
+header {
+	margin-bottom: 0em;	
+}
+
+.carousel-right, .carousel-left {
+	width: 50%;
+	float: left;
+}
+
+footer {
+	margin-top: 1em;
+	padding: 2em;
+	background-color: #555;
+	color: #aaa;
+}
+
+footer h4 {
+	margin-top: 1em;	
+}
+
+.color-sv {	color: #1A4053; }
+.color-it {	color: #59BDDC; }
+.color-dh {	color: #ECAFAC; }
+.color-pd {	color: #D0D543; }
+.color-gd {	color: #C42079; }
+
+.bg-color-neutral { background-color: #666; }
+.bg-color-sv { background-color: #1A4053; }
+.bg-color-it { background-color: #59BDDC; }
+.bg-color-dh { background-color: #ECAFAC; }
+.bg-color-pd { background-color: #D0D543; }
+.bg-color-gd { background-color: #C42079; }
+
+#obory .nav-pills > li > a {
+	background-color: transparent;
+	border-radius: 0;
+	height: 75px;
+	padding: 30px 15px;
+	color: white;
+}
+
+#obory-btn .nav-pills > li > a {
+	background-color: #aaa;
+	color: white;
+}
+
+#obory .nav-pills > li > a:hover {
+	background-color: #ddd;
+	color: black;
+	opacity: 0.2;
+}
+
+#obory-btn .nav-pills > li > a:hover {
+	background-color: #aaa;
+	opacity: 0.8;
+	color: white;
+}
+
+.obor-uvod {
+	padding: 20px;
+}
+
+.obor-uvod h1 {
+	font-size: 1.6em;
+	color: white;
+	text-transform: uppercase;
+}
+
+.obor-uvod h4 {
+	font-size: 1.1em;
+	color: #333;
+}
+
+
+/*.strojirenstvi nav.navbar {
+	background-color: #1A4053;
+	border-radius: 0;
+	color: #eee;
+}*/
+
+.strojirenstvi .obor-uvod {
+	background-color: #1A4053;
+	color: #ddd;
+}
+
+.strojirenstvi .obor-uvod h4 {
+	color: #999;
+}
+
+
+/*.informatika nav.navbar {
+	background-color: #59BDDC;
+	border-radius: 0;
+	color: #eee;
+}*/
+
+.informatika .obor-uvod {
+	background-color: #59BDDC;
+	color: #222;
+}
+
+.design .obor-uvod {
+	background-color: #D0D543;
+	color: #222;
+}
+
+.hracka .obor-uvod {
+	background-color: #ECAFAC;
+	color: #222;
+}
+
+/*.grafika nav.navbar {
+	background-color: #C42079;
+	border-radius: 0;
+	color: #eee;
+}*/
+
+.grafika .obor-uvod {
+	background-color: #C42079;
+	color: #ddd;
+}
+
+.grafika .obor-uvod h4 {
+	color: #999;
+}
+
+
+.submenu {
+	text-transform: uppercase;
+	font-size: 1em;
+    margin-top: 2px;
+}
+
+.submenu .nav-pills > li > a {
+	border-radius: 0;
+	height: 40px;
+	padding: 10px 15px;
+}
+
+.submenu .nav-pills > li {
+	background-color: #eee;
+}
+
+.submenu .nav-pills > li.active > a, .submenu .nav-pills > li > a:hover {
+	background-color: #ddd;
+}
+
+.inner-text {
+    padding: 0 20px;
+}
+
+.feature img {
+    width: 50%;
+    float: left;
+}
+
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 20px 0 0 15px;
+	border: none;
+}
+
+main p, main h3, main h4  {
+	padding: 0 15px;
+}
+
+.aldryn-people-article {
+	margin-bottom: 1em;
+	border-bottom: 1px solid #ddd;
+}
+
+/*
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #59BDDC;
+    border-color: #59BDDC;
+}*/
+
+.badge {
+    padding: 3px 7px;
+    background-color: #aaa;
+}
+
+article h3 {
+    margin-top: 0.5em;
+}
+
+#mapa {
+      width: 100%;
+      height: 400px;
+}
+
+@media only screen and (max-width: 1199px) {
+	#obory .nav-pills > li > a {
+		height: 60px;
+		padding: 10px 10px;
+		font-size: 0.9em;
+	}
+
+	img#logo {
+	    max-width: 250px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+
+	.navbar-header {
+		height: 50px;
+	}
+
+	.navbar-brand {
+		height: 50px;
+		padding: 2px 15px 1px 15px;
+	}
+
+	img#logo {
+	    max-width: 200px;
+	}
+
+	#submenu {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#obory .nav-pills > li > a {
+		height: 50px;
+		padding: 15px 10px;
+		font-size: 0.9em;
+	}	
+
+	.carousel-right {
+		display: none;
+	}
+
+	.carousel-left {
+		width: 100%;
+	}
+
+	#obory-btn {
+		display: block;
+	}
+
+	#obory-menu {
+		display: none;
+	}
+
+	.navbar {
+		min-height: 50px;
+	}
+
+	.navbar-collapse {
+		margin-top: 0px;
+	}
+
+	.navbar-toggle	{
+		background-color: gray;
+	}
+
+	.navbar-toggle .icon-bar {
+		background-color: white;		
+	}
+
+    img#logo {
+        max-width: 200px;
+    }
+
+	#search {
+		width: 90%;
+		margin: 0 40px 0 15px;
+	} 
+
+	#search-btn {		
+		margin-right: 15px;
+	}
+
+	.navbar-form.navbar-right	{
+
+	}
+	.search-results.js-search-results{
+		display: none;
+	}
+}

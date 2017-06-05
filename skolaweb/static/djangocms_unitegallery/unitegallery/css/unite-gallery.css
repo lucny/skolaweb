@@ -1352,3 +1352,7 @@ img.ug-sepia-effect{
 	background-position:-72px 0px;
 }
 
+/*------ MY -------*/
+.ug-gallery-wrapper .ug-slider-wrapper {
+	background-color: white;
+}

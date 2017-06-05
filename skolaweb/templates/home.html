@@ -1,17 +1,35 @@
 {% extends "base.html" %}
+{% load i18n staticfiles cms_tags sekizai_tags %}
 {% load cms_tags %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
-{% block menu %}
-    <div class="menu-obory">
-                <ul>
-                    <li class="obor strojirenstvi"><a href="/strojirenstvi" class="obor-icon">Strojírenství</a></li>
-                    <li class="obor informatika"><a href="/informacni-technologie" class="obor-icon">Informační technologie</a></li>
-                    <li class="obor hracka"><a href="/hracka" class="obor-icon">Design hraček</a></li>
-                    <li class="obor design"><a href="/design" class="obor-icon">Průmyslový design</a></li>
-                    <li class="obor grafika"><a href="/grafika" class="obor-icon">Grafický design</a></li>
-                </ul>
+{% block obory %}
+    <div class="row" id="obory">
+        <div class="col-lg-12" id="obory-btn">
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation"><a href="#">Obory</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-12" id="obory-menu">
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation" class="bg-color-sv"><a href="/strojirenstvi">Strojírenství</a></li>
+                <li role="presentation" class="bg-color-it"><a href="/informacni-technologie">Informační technologie</a>
+                </li>
+                <li role="presentation" class="bg-color-dh"><a href="/hracka">Design hraček</a></li>
+                <li role="presentation" class="bg-color-pd"><a href="/design">Průmyslový design</a></li>
+                <li role="presentation" class="bg-color-gd"><a href="/grafika">Grafický design</a></li>
+            </ul>
+        </div>
     </div>
-{% endblock menu %}
-
+{% endblock obory %}
+{% block logo-bar %}
+    <div class="row" id="logo-bar">
+        <div class="col-sm-6 animated slideInRight">
+            <img src="{% static 'img/msk-loga.png' %}" class="img-responsive" alt="MSK">
+        </div>
+        <div class="col-sm-6 animated slideInLeft">
+            <img src="{% static 'img/nase-skola-loga.png' %}" class="img-responsive" alt="Projekty">
+        </div>
+    </div>
+{% endblock logo-bar %}

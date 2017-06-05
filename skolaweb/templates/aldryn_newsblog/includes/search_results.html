@@ -10,7 +10,8 @@
                         {{ category.name }}{% if not forloop.last %}, {% endif %}
                     {% endfor %}
                 </strong>
-                {{ article.title }}<br />
+                {{ article.title }}
+                <br />
                 <span class="text-muted">{{ article.lead_in|striptags|truncatewords:"10"|safe }}</span>
             </a>
         </li>
