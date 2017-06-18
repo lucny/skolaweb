@@ -71,5 +71,33 @@ function getStyleObject(stobj){
             $("#obory-menu").toggle(500);
  		});
 
+        var categoryarticles = $(".category-article");
+        console.log(categoryarticles[2]);
+        if (categoryarticles.length > 0) {
+            for (var i=2; i<categoryarticles.length; i++) {
+                categoryarticles[i].hidden=true;
+            }
+        }
+
+         $('.vertical').find('.slider').bxSlider({
+             mode: 'vertical',
+             slideWidth: 800,
+             minSlides: 2,
+             slideMargin: 20,
+             speed: 1000,
+             pagerType: 'short'
+            // auto:true
+        });
+
+         $('.horizontal').find('.slider').bxSlider({
+             mode: 'horizontal',
+             slideWidth: 800,
+             minSlides: 1,
+             slideMargin: 100,
+             speed: 1000,
+             pagerType: 'short'
+            // auto:true
+        });
+
     })
 })(jQuery);

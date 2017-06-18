@@ -6,9 +6,9 @@
         <input type="hidden" name="max_articles" value="{{ instance.max_articles }}">
         <div class="input-group">
             <label for="field-{{ instance.pk }}-keyword" class="sr-only">{% trans "Hledej" %}</label>
-            <input type="text" name="q" class="form-control" id="field-{{ instance.pk }}-keyword" placeholder="{% trans 'Hledej' %}"{% if query_url == None %} disabled{% endif %}>
+            <input type="text" name="q" class="form-control" id="field-{{ instance.pk }}-keyword" placeholder="{% trans '' %}"{% if query_url == None %} disabled{% endif %}>
             <span class="input-group-btn">
-                <button type="submit" class="btn btn-primary"{% if query_url == None %} disabled{% endif %}>{% trans "Go" %}</button>
+                <button type="submit" class="btn btn-default"{% if query_url == None %} disabled{% endif %}>{% trans "Search" %}</button>
             </span>
         </div>
     </form>

@@ -8,9 +8,9 @@
         <p class="visual">
                 <a href="{{ article.get_absolute_url }}">
             {% if image == "large" %}
-                <img src="{% thumbnail article.featured_image 800x450 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}" class="img-responsive">
+                <img src="{% thumbnail article.featured_image 800x533 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}" class="img-responsive img-rounded">
             {% else %}
-                <img src="{% thumbnail article.featured_image 400x225 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}" class="img-responsive">
+                <img src="{% thumbnail article.featured_image 400x267 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}" class="img-responsive img-rounded" style="filter:saturate(0.3);">
             {% endif %}
                 </a>
         </p>
@@ -42,7 +42,7 @@
     </div>
 
     {% if detail_view %}
-        <div class="col-sm-12 lead">
+        <div class="col-sm-12">
          <h2>{% render_model article "title" %}</h2>
         {% if article.categories %}
             <p class="category">

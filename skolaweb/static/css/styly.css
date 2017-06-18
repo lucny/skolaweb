@@ -1,11 +1,31 @@
 * {font-family: 'Hind Guntur', sans-serif;}
 
+.page-header {
+    padding-bottom: 9px;
+    margin: 20px 0 0 0px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+
 h2 {
+	text-transform: uppercase;
 	background-color: #eee;
 	color: #666;
+	padding: 1em;
+}
+
+h1 {
 	text-transform: uppercase;
 	font-size: 1.2em;
+	text-align: center;
 	padding: 1em;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+
+h2 {
+	font-size: 1em;
+	text-align: center;
 }
 
 h3 {
@@ -22,11 +42,11 @@ figure {
 }
 
 article {
-	padding: 0 1em;
+	padding: 0;
 }
 
 article h3 a {
-	color: #222;
+	color: #1A4053;
 }
 
 article .lead {
@@ -34,7 +54,8 @@ article .lead {
 }
 
 article h3 {
-	line-height: 1.5;
+	line-height: 1.25;
+	font-weight: 400;
 }
 
 article.top h3 a {
@@ -48,6 +69,7 @@ article .obsah h3 {
 .sedy {
 	background-color: #f6f6f6;
 	padding: 10px;
+	font-weight: 400;
 }
 
 .zeleny {
@@ -208,9 +230,12 @@ footer h4 {
 }
 
 .obor-uvod h1 {
-	font-size: 1.6em;
-	color: white;
-	text-transform: uppercase;
+	font-size: 1.2em;
+	color: #333;
+	text-transform: none;
+	text-align: left;
+	border:none;
+	padding: 0;
 }
 
 .obor-uvod h4 {
@@ -230,8 +255,8 @@ footer h4 {
 	color: #ddd;
 }
 
-.strojirenstvi .obor-uvod h4 {
-	color: #999;
+.strojirenstvi .obor-uvod h1 {
+	color: #fff;
 }
 
 
@@ -267,8 +292,8 @@ footer h4 {
 	color: #ddd;
 }
 
-.grafika .obor-uvod h4 {
-	color: #999;
+.grafika .obor-uvod h1 {
+	color: #fff;
 }
 
 
@@ -285,11 +310,11 @@ footer h4 {
 }
 
 .submenu .nav-pills > li {
-	background-color: #eee;
+/*	background-color: #eee;*/
 }
 
 .submenu .nav-pills > li.active > a, .submenu .nav-pills > li > a:hover {
-	background-color: #ddd;
+	background-color: #eee;
 }
 
 .inner-text {
@@ -301,15 +326,8 @@ footer h4 {
     float: left;
 }
 
-
-.page-header {
-    padding-bottom: 9px;
-    margin: 20px 0 0 15px;
-	border: none;
-}
-
 main p, main h3, main h4  {
-	padding: 0 15px;
+	padding: 0;
 }
 
 .aldryn-people-article {
@@ -330,11 +348,35 @@ main p, main h3, main h4  {
 
 article h3 {
     margin-top: 0.5em;
+	text-transform: uppercase;
+}
+
+article .article-date {
+	font-size: 0.8em;
+	margin: 0 0 10px 0;
+	padding: 5px 0 2px 0;
+	/*background-color: #eee;*/
+	color: #666;
+	border-bottom: 1px dotted #aaa;
 }
 
 #mapa {
       width: 100%;
       height: 400px;
+}
+
+.bx-wrapper {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+
+.bx-wrapper .bx-controls-direction a {
+	top: 100%;
+	bottom: 0;
+    margin-top: 15px;
+	opacity: 0.2;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -401,7 +443,7 @@ article h3 {
 	}
 
 	.navbar-toggle	{
-		background-color: gray;
+		background-color: #333;
 	}
 
 	.navbar-toggle .icon-bar {
@@ -427,4 +469,9 @@ article h3 {
 	.search-results.js-search-results{
 		display: none;
 	}
+
+	#submenu {
+		display: none;
+	}
+
 }

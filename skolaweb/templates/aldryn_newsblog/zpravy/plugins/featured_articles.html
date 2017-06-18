@@ -1,8 +1,24 @@
 {% load i18n %}
 
-<div class="aldryn aldryn-newsblog">
+<div class="aldryn aldryn-newsblog aldryn-newsblog-articles aldryn-newsblog-articles-featured">
+    <div class="slider">
     {% for article in articles_list %}
-        {% include "aldryn_newsblog/zpravy/includes/article-featured.html" with namespace=instance.app_config.namespace image="large" %}
-        <hr>
+        {% if request.current_page.get_page_title == "Úvodní stránka" %}
+            {% include "aldryn_newsblog/zpravy/includes/article-featured.html" with namespace=instance.app_config.namespace %}
+            {#% if not forloop.last %#}<!-- <hr> -->{#% endif %#}
+        {% elif request.current_page.get_page_title != "" %}
+            {% for category in article.categories.all %}
+               {% if category.name == request.current_page.get_page_title %}
+                    <div class="slide">
+                        {% include "aldryn_newsblog/zpravy/includes/article-new.html" with namespace=instance.app_config.namespace %}
+                    </div>
+               {% endif %}
+            {% endfor %}
+        {% else %}
+            {% include "aldryn_newsblog/zpravy/includes/article-latest.html" with namespace=instance.app_config.namespace %}
+        {% endif %}
+    {% empty %}
+        <p class="well">{% trans "No items available" %}</p>
     {% endfor %}
+    </div>
 </div>

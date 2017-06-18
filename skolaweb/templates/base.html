@@ -60,7 +60,7 @@
                                                 <input name="max_articles" value="10" type="hidden">
                                                 <div class="input-group">
                                                     <input name="q" type="text" class="form-control"
-                                                           placeholder="Hledej" id="search-field">
+                                                           placeholder="" id="search-field">
                                                     <span class="input-group-btn">
 							        <button class="btn btn-default" type="submit" id="search-btn" data-toggle="modal"
                                             data-target="#myModal"><b class="glyphicon glyphicon-search"></b></button>
@@ -150,8 +150,8 @@
                     <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-0">
                         <p><img src="{% static 'img/kraj-logo-cb.png' %}" alt="" class="img img-responsive"></p>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <h4 class="text-center">Střední škola průmyslová a umělecká, Opava</h4>
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+                        <h3 class="text-left">Střední škola průmyslová a umělecká, Opava</h3>
                         <ul style="list-style-type: none">
                             <li>Praskova 399/8, Opava, 746 01</li>
                             <li>Právní forma: Příspěvková organizace</li>
@@ -161,19 +161,22 @@
                             <li>ID datové schránky: xc5gfwu, typ datové schránky: právnická osoba</li>
                         </ul>
                         <hr style="border: 1px dotted #666">
-                        <h5 class="text-center">Školní dílny</h4>
+                        <h5 class="text-left">Školní dílny</h5>
                             <ul style="list-style-type: none">
                                 <li>Janská 1849/30, Opava, 746 01</li>
                                 <li>tel.: +420 734 353 923</li>
                             </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
+                        <!--
                         <img src="{% static 'img/skola-shora.png' %}" alt="" class="img img-responsive"><br>
                         <img src="{% static 'img/skola-logo-trans.png' %}" alt="" class="img img-responsive"
                              style="width:50%">
+                         -->
                         <!--
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d736.9099870322948!2d17.90774688915752!3d49.937445556276074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1494082325499" height="300" frameborder="0" style="width: 100%; border:0" allowfullscreen></iframe>
                         -->
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        <img src="{% static 'img/sdz.png' %}" alt="" class="img img-responsive"><br>
                     </div>
                 </div>
                 <hr>
@@ -193,6 +196,7 @@
         <script src="{% static 'js/addons/cl.explorer.js' %}"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7aAMiiG2r9mFe8JqIcDveqKpd8vs2Irw&callback=myMap"
         type="text/javascript"></script>
+        <script src="{% static 'js/jquery.bxslider/jquery.bxslider.min.js' %}"></script>
         <script>
         function myMap() {
         var mapProp= {
