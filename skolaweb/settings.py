@@ -284,7 +284,7 @@ DATABASES = {
             'NAME': 'skola',
             'HOST': 'localhost',
             'USER': 'root',
-            'PASSWORD': 'admin',
+            'PASSWORD': 'Keram.7756',
             'PORT': ''
         }
 }
